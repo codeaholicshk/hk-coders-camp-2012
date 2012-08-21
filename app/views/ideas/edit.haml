@@ -2,8 +2,6 @@
   .secondary-navigation
     %ul.wat-cf
       %li.first=link_to pat(:list), url(:ideas, :index)
-      %li=link_to pat(:new), url(:ideas, :new)
-      %li.active=link_to pat(:edit), url(:ideas, :edit, :id => @idea.id)
   .content
     %h2.title
       =pat(:edit)
