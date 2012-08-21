@@ -11,6 +11,7 @@ gem 'unicorn'
 
 # tools
 gem 'rake'
+gem 'foreman'
 
 # html + css
 gem 'sass'
@@ -33,4 +34,5 @@ end
 
 group :development do
   gem 'pry'
+  gem 'pry-padrino'
 end
