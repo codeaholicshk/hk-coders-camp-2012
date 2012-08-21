@@ -34,7 +34,7 @@ Bundler.require(:default, PADRINO_ENV)
 # Add your before (RE)load hooks here
 #
 Padrino.before_load do
-  Mongoid.load!(File.join(Padrino.root,"config/database.yml"))
+  Mongoid.load!(File.join(Padrino.root,"config/mongoid.yml"))
 end
 
 ##

@@ -14,7 +14,7 @@ test:
         
 production:
   sessions:
-    default:  
+    default:
       hosts: 
         - <%= ENV['MONGOLAB_HOST'] %>
       database: <%= ENV['MONGOLAB_DATABASE'] %>
