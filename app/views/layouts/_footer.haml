@@ -1,0 +1,17 @@
+:javascript
+
+  var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34237920-1']);
+      _gaq.push(['_trackPageview']);
+
+  var addJS = function(src) {
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = src;
+    var p = document.getElementsByTagName('script')[0];
+    p.parentNode.insertBefore(s, p);
+  };
+
+  addJS('https://ssl.google-analytics.com/ga.js');
+  addJS('https://apis.google.com/js/plusone.js');
