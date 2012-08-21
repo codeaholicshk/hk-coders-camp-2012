@@ -14,7 +14,7 @@
           %th=mat(:idea, :created_at)
           %th=mat(:idea, :updated_at)
           %th.last="&nbsp;"
-        -@ideas.each do |idea|
+        -@ideas.any? && @ideas.each do |idea|
           %tr
             %td.first=idea.name
             %td=idea.description
