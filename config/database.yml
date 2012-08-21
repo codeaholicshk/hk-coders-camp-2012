@@ -15,4 +15,8 @@ test:
 production:
   sessions:
     default:  
-      uri: <%= ENV['MONGOLAB_URI'] %>
+      hosts: 
+        - <%= ENV['MONGOLAB_HOST'] %>
+      database: <%= ENV['MONGOLAB_DATABASE'] %>
+      username: <%= ENV['MONGOLAB_USER'] %>
+      password: <%= ENV['MONGOLAB_PASSWORD'] %>
