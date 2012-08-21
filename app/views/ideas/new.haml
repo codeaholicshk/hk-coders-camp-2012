@@ -1,11 +1,6 @@
 .block
-  .secondary-navigation
-    %ul.wat-cf
-      %li.first=link_to pat(:list), url(:ideas, :index)
   .content
-    %h2.title
-      =pat(:new)
-      =mt(:idea)
+    %h2.title Propose idea
     .inner
       -form_for :idea, url(:ideas, :create), :class => :form do |f|
         =partial "ideas/form", :locals => { :f => f }

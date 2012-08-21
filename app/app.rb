@@ -79,7 +79,7 @@ class HkCodersCamp2012 < Padrino::Application
     end
   end
   
-  get :auth, :map => '/auth/:provider/callback' do    
+  get :auth, :map => '/auth/:provider/callback' do      
     auth    = request.env["omniauth.auth"]
     account = Account.where(provider: auth["provider"]).where(uid: auth["uid"]).first || Account.create_with_omniauth(auth)
     set_current_account(account)

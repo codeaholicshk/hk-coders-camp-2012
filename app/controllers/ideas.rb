@@ -1,16 +1,19 @@
 HkCodersCamp2012.controllers :ideas do
   get :index do
-    @ideas = Idea.all
+    # @ideas = Idea.all
+    # TODO change it to map reduce later
+    @ideas = Account.all.map(&:ideas).flatten
     render 'ideas/index'
   end
 
   get :new do
-    @idea = Idea.new
+    @idea = current_account.ideas.new
+    @idea.cool_things = Array.new(3)
     render 'ideas/new'
   end
 
   post :create do
-    @idea = Idea.new(params[:idea])
+    @idea = current_account.ideas.new(params[:idea])
     if @idea.save
       flash[:notice] = 'Idea was successfully created.'
       redirect url(:ideas, :edit, :id => @idea.id)

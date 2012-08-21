@@ -1,8 +1,7 @@
 .group
-  =f.label :name
+  =f.label "Topic in one sentense"
   =f.error_message_on :name
   =f.text_field :name, :class => :text_field
-  %span.description one sentense
 
 .group
   =f.label :description
@@ -11,11 +10,10 @@
   %span.description has to be related to coding
 
 .group
-  =f.label :cool_things
+  =f.label "3 cool things about this idea"
   =f.error_message_on :cool_things
-  =f.text_field :cool_things, :class => :text_field
-  %span.description How cool is it ?
-
+  - @idea.cool_things.each do |cool_thing|
+    = f.text_field :cool_thing
 
 .group.navform.wat-cf
   =f.submit pat(:save), :class => :button
