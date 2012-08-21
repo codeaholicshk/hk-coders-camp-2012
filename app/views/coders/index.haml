@@ -6,19 +6,10 @@
       =pat(:all)
       =mt(:coders)
     .inner
-      %table.table
-        %tr
-          %th.first=mat(:coder, :name)
-          %th=mat(:coder, :gravatar_id)
-          %th=mat(:coder, :github_page)
-          %th=mat(:coder, :blog_url)     
-          %th.last="&nbsp;"
-        -@coders.each do |coder|
-          %tr
-            %td.first=coder.name
-            %td=coder.gravatar_id
-            %td=coder.github_page
-            %td=coder.blog_url
-      .actions-bar.wat-cf
-        .actions="&nbsp;"
+      %ul.thumbnails
+        - @coders.each do |coder|
+          %li.span3
+            .thumbnail
+              = gravatar_tag(coder, size: 210)
+              %h3= link_to coder.name, coder.github_page
 
