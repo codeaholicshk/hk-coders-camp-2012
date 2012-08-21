@@ -1,0 +1,30 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active=link_to pat(:list), url(:accounts, :index)
+      %li=link_to pat(:new), url(:accounts, :new)
+  .content
+    %h2.title
+      =pat(:all)
+      =mt(:accounts)
+    .inner
+      %table.table
+        %tr
+          %th.first=mat(:account, :name)
+          %th=mat(:account, :gravatar_id)
+          %th=mat(:account, :github_page)
+          %th=mat(:account, :blog_url)
+          %th.last="&nbsp;"
+        -@accounts.each do |account|
+          %tr
+            %td.first=account.name
+            %td=account.gravatar_id
+            %td=account.github_page
+            %td=account.blog_url
+            %td.last
+              =button_to pat(:edit), url(:accounts, :edit, :id => idea.id), :method => :get, :class => :button_to
+              ="|"
+              =button_to pat(:delete), url(:accounts, :destroy, :id => idea.id), :method => :delete, :class => :button_to, :onsubmit => "return confirm('#{pat(:confirm)}')"
+      .actions-bar.wat-cf
+        .actions="&nbsp;"
+

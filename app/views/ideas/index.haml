@@ -1,0 +1,30 @@
+.block
+  .secondary-navigation
+    =link_to "Propose idea", url(:ideas, :new), :class => "btn btn-large"
+  .content
+    %h2.title
+      =pat(:all)
+      =mt(:ideas)
+    .inner
+      %table.table
+        %tr
+          %th.first=mat(:idea, :name)
+          %th=mat(:idea, :description)
+          %th=mat(:idea, :cool_things)
+          %th=mat(:idea, :created_at)
+          %th=mat(:idea, :updated_at)
+          %th.last="&nbsp;"
+        -@ideas.each do |idea|
+          %tr
+            %td.first=idea.name
+            %td=idea.description
+            %td=idea.cool_things
+            %td=idea.created_at
+            %td=idea.updated_at            
+            %td.last
+              =button_to pat(:edit), url(:ideas, :edit, :id => idea.id), :method => :get, :class => :button_to
+              ="|"
+              =button_to pat(:delete), url(:ideas, :destroy, :id => idea.id), :method => :delete, :class => :button_to, :onsubmit => "return confirm('#{pat(:confirm)}')"
+      .actions-bar.wat-cf
+        .actions="&nbsp;"
+

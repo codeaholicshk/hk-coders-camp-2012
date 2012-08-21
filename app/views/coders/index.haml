@@ -1,0 +1,24 @@
+.block
+  .secondary-navigation
+    =link_to( "Sign Up with Github", '/auth/github', :class => "btn btn-large")
+  .content
+    %h2.title
+      =pat(:all)
+      =mt(:ideas)
+    .inner
+      %table.table
+        %tr
+          %th.first=mat(:coder, :name)
+          %th=mat(:coder, :gravatar_id)
+          %th=mat(:coder, :github_page)
+          %th=mat(:coder, :blog_url)     
+          %th.last="&nbsp;"
+        -@coders.each do |coder|
+          %tr
+            %td.first=coder.name
+            %td=coder.gravatar_id
+            %td=coder.github_page
+            %td=coder.blog_url
+      .actions-bar.wat-cf
+        .actions="&nbsp;"
+

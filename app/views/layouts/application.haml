@@ -1,0 +1,32 @@
+!!! Strict
+%html{:lang => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/        
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %meta{ name: 'author', content: "Matthew Rudy Jacobs, Eddie Lau" }/
+    %meta{ name: 'description', content: "24 Hours Coders Camp for Hong Kong. 12 Oct 2012(Fri) to 13 Oct 2012(Sat). By community and for community." }/
+    %meta{ name: 'keywords', content: "Hong Kong,Coder,Camp" }/
+    %meta{ name: 'viewport', content: 'width=device-width; initial-scale=1.0; maximum-scale=1.0;' }/
+    %meta{ name: 'distribution', content: 'global' }/
+    %meta{ name: 'robots', content: 'follow, all' }/
+    %meta{ name: 'language', content: 'en' }/
+    %meta{ name: 'googlebot', content: 'index, follow' }/
+    %meta{ name: 'revisit-after', content: '2 days' }/
+    
+    %title Hong Kong Coders Camp 2012
+    =stylesheet_link_tag "bootstrap.min", "hk-coders-camp"
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          = link_to "Hong Kong Coders Camp", "/", :class => "brand"
+          #main-menu.nav-collapse
+            %ul#main-menu-left.nav
+              %li=link_to "Ideas", "/ideas"
+              %li=link_to "Coders", "/coders"
+
+            %ul#main-menu-right.nav.pull-right
+              %li=link_to "Coderaholics HK", "http://codeaholics.hk"
+    .main-content
+      .container 
+        =yield
