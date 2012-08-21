@@ -1,8 +1,8 @@
-!!! Strict
-%html{:lang => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+!!! 5
+%html{ lang: "en", xmlns: "http://www.w3.org/1999/xhtml"}
   %head
-    %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/        
-    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %link{ rel: "shortcut icon", href: "/favicon.ico", type: "image/x-icon"}/
+    %meta{ content: "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
     %meta{ name: 'author', content: "Matthew Rudy Jacobs, Eddie Lau" }/
     %meta{ name: 'description', content: "24 Hours Coders Camp for Hong Kong. 12 Oct 2012(Fri) to 13 Oct 2012(Sat). By community and for community." }/
     %meta{ name: 'keywords', content: "Hong Kong,Coder,Camp" }/
@@ -12,15 +12,16 @@
     %meta{ name: 'language', content: 'en' }/
     %meta{ name: 'googlebot', content: 'index, follow' }/
     %meta{ name: 'revisit-after', content: '2 days' }/
-    
+
     %title Hong Kong Coders Camp 2012
-    =stylesheet_link_tag "bootstrap.min", "hk-coders-camp"
-    
+
+    = stylesheet_link_tag "bootstrap.min", "hk-coders-camp"
+
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-34237920-1']);
       _gaq.push(['_trackPageview']);
-    
+
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -31,18 +32,19 @@
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
-          = link_to "Hong Kong Coders Camp", "/", :class => "brand"
+          = link_to "Hong Kong Coders Camp", "/", class: "brand"
           #main-menu.nav-collapse
             %ul#main-menu-left.nav
-              %li=link_to "Ideas", "/ideas"
-              %li=link_to "Coders", "/coders"
+              %li= link_to "Ideas", "/ideas"
+              %li= link_to "Coders", "/coders"
 
             %ul#main-menu-right.nav.pull-right
-              %li=link_to "Codeaholics HK", "http://codeaholics.hk"
+              %li= link_to "Codeaholics HK", "http://codeaholics.hk"
 
     .main-content
       .container
         = yield
+
     :javascript
       (function() {
         var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
