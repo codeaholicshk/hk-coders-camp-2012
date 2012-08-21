@@ -4,13 +4,6 @@ development:
       database: hk_coders_camp_2012_dev
       hosts:
         - localhost:27017
-        
-production:
-  sessions:
-    default:
-      database: hk_coders_camp_2012_prod
-      hosts:
-        - localhost:27017
 
 test:
   sessions:
@@ -18,3 +11,6 @@ test:
       database: hk_coders_camp_2012_test
       hosts:
         - localhost:27017
+        
+production:
+  uri: <%= ENV['MONGOLAB_URI'] %>
