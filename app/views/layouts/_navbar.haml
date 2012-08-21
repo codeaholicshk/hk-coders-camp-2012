@@ -1,0 +1,21 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      = link_to "Hong Kong Coders Camp", "/", class: "brand"
+      #main-menu.nav-collapse
+        %ul#main-menu-left.nav
+          %li= link_to "Ideas", "/ideas"
+          %li= link_to "Coders", "/coders"
+
+        %ul#main-menu-right.nav.pull-right
+          - if current_account
+            %li
+              = link_to "users/profile" do
+                = gravatar_tag(current_account, size: 20)
+                me
+          - else
+            %li
+              = link_to '/auth/github' do
+                Connect with Github
+
+          %li= link_to "Codeaholics HK", "http://codeaholics.hk"

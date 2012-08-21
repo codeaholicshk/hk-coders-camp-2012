@@ -4,6 +4,6 @@ HkCodersCamp2012.helpers do
 
   def gravatar_tag(user, options={})
     size = options.delete(:size) || 40
-    image_tag("https://secure.gravatar.com/avatar/#{user.gravatar_id}?s=#{size}")
+    image_tag("https://secure.gravatar.com/avatar/#{user.gravatar_id}?s=#{size}", height: size, width: size)
   end
 end
