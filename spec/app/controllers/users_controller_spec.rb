@@ -6,6 +6,6 @@ describe "UsersController" do
   end
 
   it "returns hello world" do
-    last_response.body.should == "Hello World"
+    last_response.status.should be(200)
   end
 end
