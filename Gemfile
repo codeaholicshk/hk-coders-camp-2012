@@ -7,7 +7,7 @@ gem 'padrino', '0.10.7'
 gem 'sinatra-flash', require: 'sinatra/flash'
 
 # server
-# gem 'unicorn'
+gem 'unicorn'
 
 # tools
 gem 'rake'
