@@ -6,9 +6,31 @@ body {
   padding-left: 20px;
   border-left: solid 2px #cccccc; }
 
+.tagline {
+  margin: 30px 10px;
+  text-align: center; }
+
+.schedule-overview {
+  margin: 20px 0px; }
+  .schedule-overview td {
+    width: 200px;
+    padding: 8px;
+    border: solid 1px #996633;
+    font-size: 1.3em;
+    text-align: center; }
+
+.homepage-action-buttons {
+  text-align: center; }
+  .homepage-action-buttons a {
+    margin: 10px 20px;
+    font-size: 2em; }
+
+hr {
+  margin: 30px 0px; }
+
 .ideas-sticky-notes {
   overflow: hidden;
-  padding: 3em;
+  padding: 15px;
   list-style: none; }
   .ideas-sticky-notes li a:hover, .ideas-sticky-notes li a:focus {
     box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
