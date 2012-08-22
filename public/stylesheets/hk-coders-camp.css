@@ -4,8 +4,11 @@ body {
 
 .sidebar {
   min-height: 200px;
-  padding-left: 20px;
-  border-left: solid 2px #cccccc; }
+  min-width: 300px;
+  border-left: 2px solid #cccccc;
+  padding: 20px;
+  position: fixed;
+  right: 0; }
 
 .homepage-banner {
   padding: 10px 0px;
