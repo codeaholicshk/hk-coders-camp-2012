@@ -1,8 +1,44 @@
 .row
-  .span8 
-    %h1.tagline Hong Kong Coders Camp 2012
-    %h1.tagline 19:00 12 Oct ~ 19:00 13 Oct
+  .span8
+    .homepage-banner
+      %h1.tagline Hong Kong Coders Camp 2012
+      %h2.tagline ~ 24 Hours Iterative Coding ~
+      %h4.tagline Date: 12 Oct 19:00 ~ 13 Oct 19:00 (HKG)
+      %h4.tagline Venue: To Be Confirmed
+      
+      .homepage-action-buttons
+        =link_to "Register Now", "#", :class => "btn btn-large"
+      
+    %hr
     
+    %h2.section-header
+      %span How does it work
+    
+    %ol      
+      %li
+        Register.
+      %li
+        Propose ideas.
+      %li
+        Vote for ideas you like.        
+      %li
+        A shortlist will be finalized after 5 weeks election period.
+      %li
+        Coders are then organized into small teams (2 - 4 per team)
+      %li
+        Come together on 12th Oct and start coding
+      
+    %br 
+        
+    %p
+      We are not going to enforce rules like your boss dictating what you have to build.
+    %p        
+      But we try our best to make sure you will have a great time with other coders.
+   
+    %hr
+        
+    %h2.section-header
+      %span Schedule
     %table.schedule-overview
       %tr
         %td 20 Aug ~ 23 Sep
@@ -17,38 +53,7 @@
         %td
           =link_to "Team Formation", "#"
         %td
-          =link_to "CODE", "#"
-    
-    .homepage-action-buttons
-      =link_to "Register Now", "#", :class => "btn btn-large" 
-    
-    %hr
-
-    %h2 Finally a coding event for Hong Kong Coders
-    %h3 We are having our first (?) Coders Camp ! yay !
-    %p
-      this whole thing was proposed at Codeaholics HK August Meetup.
-      =link_to "Proposal", "http://codeaholics-hk-camp-2012.herokuapp.com/"
-    
-    %hr
-    
-    %h2 You are not the only GEEK in the village !
-    %p
-      There are so many passionated coders wanna spend their time and effort on 
-      %span something
-      interesting
-      %span (* obviously not talking about Hong Kong office work)     
-    %p
-      Starting from 12<sup>th</sup> Oct evening, we will spend 24 hours together coding
-      %span something
-      \.
-    %ul
-      %li sleeping bags
-      %li snacks and drinks ( beer, redbull, ...)
-      
-    %hr
-    
-    %h2 So... What do we do actually ?!
+          =link_to "CODE", "#" 
     
     %h3 Stage 1. Idea Election
     %p 
@@ -58,6 +63,70 @@
       
     %h3 Stage 3. Team Formation
     %p 
+
+    %h3 Stage 4. Code
+    %p
+      
+    %hr
+
+    %h2.section-header
+      %span What to build    
+    
+    %p
+      We don't care if the system we build is solving 1,000,000 dollars problem or not.
+    %p
+      We don't give a shit about the business model.
+    %p      
+      We just want you to build something fun together.      
+    
+    %hr
+    
+    %h2.section-header
+      %span Why ?
+      
+    %h3
+      You are not the only GEEK in the village !
+    %p
+      There are so many passionated coders like you, who wanna spend time and effort on something interesting.
+    %p
+      Just come and do something. I don't have to give you reason at all.
+    
+    %hr
+      
+    %h2.section-header
+      %span Who can join ?
+            
+    %p
+      If you are interested in coding, come and join us.
+    %p
+      The event is programming language ignostic. You can pick whatever you like from your toolbox to make it happen. 
+
+    %hr
+    
+    %h2.section-header
+      %span Equipment and Sponsors
+            
+    %p
+      We are in the process talking to software and hardware sponsors.
+    %p
+      Here are things we will provide for sure:
+    %ul
+      %li sleeping bags
+      %li snacks and drinks ( beer, redbull, ...)
+      
+    %hr
+    
+    %h2.section-header
+      %span You have a question ?
+    %p
+      Check out our
+      =link_to "FAQ", "#"
+      or talk to us at @codeaholicshk
+    %p
+      subscribe to Codeaholics HK mailing list
+    %p
+      Note: this whole thing was proposed at Codeaholics HK August Meetup.
+      =link_to "Proposal", "http://codeaholics-hk-camp-2012.herokuapp.com/"      
            
   .span3.sidebar.pull-right
     %h3 Wanna join ?

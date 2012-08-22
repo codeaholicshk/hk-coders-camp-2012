@@ -1,22 +1,37 @@
 body {
-  margin-top: 60px; }
+  margin-top: 60px;
+  font-size: 1em; }
 
 .sidebar {
   min-height: 200px;
   padding-left: 20px;
   border-left: solid 2px #cccccc; }
 
+.homepage-banner {
+  padding: 10px 0px;
+  border: 3px solid #ed5824;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 2px 2px 3px #ed5824;
+  background: -moz-linear-gradient(center top, #fefefe, #eeeeee) repeat scroll 0 0 transparent; }
+
 .tagline {
   margin: 30px 10px;
   text-align: center; }
+
+.section-header {
+  margin-bottom: 10px; }
+  .section-header span {
+    padding-left: 5px;
+    padding-right: 25px;
+    border-bottom: solid 2px #ed5824; }
 
 .schedule-overview {
   margin: 20px 0px; }
   .schedule-overview td {
     width: 200px;
-    padding: 8px;
+    padding: 5px;
     border: solid 1px #996633;
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-align: center; }
 
 .homepage-action-buttons {
