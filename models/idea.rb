@@ -7,7 +7,8 @@ class Idea
   field :description, :type => String
   field :cool_things, :type => Array
   
-  embedded_in :account, inverse_of: :published_ideas
+  belongs_to :account, inverse_of: :published_ideas
+  embeds_many :comments
 
   # You can define indexes on documents using the index macro:
   # index :field <, :unique => true>

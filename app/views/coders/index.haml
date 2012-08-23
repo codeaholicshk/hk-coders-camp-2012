@@ -1,10 +1,12 @@
 .block
-  .secondary-navigation
-    =link_to( "Sign Up with Github", '/auth/github', :class => "btn btn-large")
+  .secondary-navigation.pull-right
+    - if current_account.nil?
+      =link_to( "Register with your Github", '/auth/github', :class => "btn btn-large")
+    - else
+      =link_to( "Invite your friends", '#', :class => "btn btn-large")
   .content
     %h2.title
-      =pat(:all)
-      =mt(:coders)
+      Registered Coders
     .inner
       %ul.thumbnails
         - @coders.each do |coder|

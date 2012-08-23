@@ -20,7 +20,7 @@ class Account
     {unique: true}
   )
   
-  embeds_many :ideas, as: :published_ideas
+  has_many :ideas, as: :published_ideas
   
   # Validations
   validates_presence_of     :role

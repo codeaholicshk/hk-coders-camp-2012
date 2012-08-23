@@ -1,7 +1,7 @@
 .block
   .secondary-navigation.pull-right
     - if current_account.nil?
-      =link_to "Sign Up and Propose idea", '/auth/github', :class => "btn btn-large"
+      =link_to "Register and Propose idea", '/auth/github', :class => "btn btn-large"
     - else
       =link_to "Propose idea", url(:ideas, :new), :class => "btn btn-large"    
   .content
@@ -9,7 +9,7 @@
     %ul.ideas-sticky-notes
       - @ideas.any? && @ideas.each do |idea|
         %li
-          = link_to "#" do
+          = link_to url(:ideas, :show, :id => idea) do
             %h2= idea.name
             .idea-desc= idea.description
             .idea-proposed

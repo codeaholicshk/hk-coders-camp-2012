@@ -84,7 +84,7 @@ class HkCodersCamp2012 < Padrino::Application
     account = Account.where(provider: auth["provider"]).where(uid: auth["uid"]).first || Account.create_with_omniauth(auth)
     set_current_account(account)
      
-    redirect url("users/profile")
+    redirect url("coders")
   end
   
   get :index do

@@ -2,7 +2,7 @@ HkCodersCamp2012.controllers :ideas do
   get :index do
     # @ideas = Idea.all
     # TODO change it to map reduce later
-    @ideas = Account.all.map(&:ideas).flatten
+    @ideas = Idea.all
     render 'ideas/index'
   end
 
@@ -12,6 +12,11 @@ HkCodersCamp2012.controllers :ideas do
     render 'ideas/new'
   end
 
+  get :show do
+    @idea = Idea.find(params[:id])
+    render 'ideas/show'
+  end
+  
   post :create do
     @idea = current_account.ideas.new(params[:idea])
     if @idea.save

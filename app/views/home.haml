@@ -132,9 +132,8 @@
   .span3.sidebar.pull-right
     %h3 Wanna join ?
     %p
-      Sign Up with
-      =link_to( "Github", '/auth/github')
-      =link_to( image_tag("github.png"), '/auth/github')
+      Register with your
+      =link_to( image_tag("github.png", :title => "Github OAuth"), '/auth/github')
       
     %hr
     
