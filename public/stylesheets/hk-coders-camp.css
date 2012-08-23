@@ -6,9 +6,8 @@ body {
   min-height: 200px;
   min-width: 300px;
   border-left: 2px solid #cccccc;
-  padding: 20px;
-  position: fixed;
-  right: 0; }
+  min-width: 200px;
+  padding-left: 20px; }
 
 .homepage-banner {
   padding: 10px 0px;
