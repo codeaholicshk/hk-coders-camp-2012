@@ -30,9 +30,12 @@ gem 'omniauth-github'
 group :test do
   gem 'rspec'
   gem 'rack-test', require: "rack/test"
+  gem "factory_girl", "~> 4.0"
+  gem 'database_cleaner'
 end
 
 group :development do
   gem 'pry'
   gem 'pry-padrino'
+  gem 'rack-mini-profiler'
 end

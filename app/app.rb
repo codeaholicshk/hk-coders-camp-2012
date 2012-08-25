@@ -1,4 +1,6 @@
+require 'rack-mini-profiler'
 class HkCodersCamp2012 < Padrino::Application
+  use Rack::MiniProfiler
   register SassInitializer
   register Padrino::Rendering
   register Padrino::Mailer

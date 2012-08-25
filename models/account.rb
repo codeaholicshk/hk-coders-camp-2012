@@ -20,7 +20,7 @@ class Account
     {unique: true}
   )
 
-  has_many :ideas, as: :published_ideas
+  has_many :published_ideas, :class_name => "Idea", :inverse_of => :published_by_account
 
   # Validations
   validates_presence_of     :role
