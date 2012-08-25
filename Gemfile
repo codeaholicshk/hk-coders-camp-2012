@@ -32,6 +32,7 @@ group :test do
   gem 'rack-test', require: "rack/test"
   gem "factory_girl", "~> 4.0"
   gem 'database_cleaner'
+  gem 'webrat'
 end
 
 group :development do

@@ -1,11 +1,22 @@
 require 'spec_helper'
+require 'webrat'
 
 describe "IdeasController" do
   before do
-    get "/"
+    @idea = FactoryGirl.create(:idea)
   end
-
-  it "returns hello world" do
-    last_response.status.should be(200)
+  
+  describe "#index" do
+    before do
+      get "/ideas/"
+    end
+    
+    it "be success" do
+      last_response.status.should be(200)
+    end
+    
+    it "renders idea name" do
+      last_response.should have_selector("h2", :content => @idea.name)
+    end
   end
 end
