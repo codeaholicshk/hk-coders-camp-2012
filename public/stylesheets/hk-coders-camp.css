@@ -1,31 +1,29 @@
 body {
   margin-top: 60px;
-  font-size: 1em; }
+  font-size: 1em;
+  background: whitesmoke; }
 
-.sidebar {
-  min-height: 200px;
-  min-width: 300px;
-  border-left: 2px solid #cccccc;
-  min-width: 200px;
-  padding-left: 20px; }
+section {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 5px;
+  background: white; }
+  section header {
+    margin-bottom: 5px;
+    border-bottom: 2px dotted #dd4814; }
+    section header h2 {
+      margin-top: 0;
+      margin-bottom: 0; }
 
-.homepage-banner {
+.banner {
   padding: 10px 0px;
-  border: 3px solid #ed5824;
-  border-radius: 5px 5px 5px 5px;
-  box-shadow: 2px 2px 3px #ed5824;
-  background: -moz-linear-gradient(center top, #fefefe, #eeeeee) repeat scroll 0 0 transparent; }
+  border: 20px double #dd4814; }
+  .banner h1, .banner h2, .banner h3, .banner h4 {
+    margin: 30px 10px;
+    text-align: center; }
 
-.tagline {
-  margin: 30px 10px;
-  text-align: center; }
-
-.section-header {
-  margin-bottom: 10px; }
-  .section-header span {
-    padding-left: 5px;
-    padding-right: 25px;
-    border-bottom: solid 2px #ed5824; }
+.thumbnail {
+  background: white; }
 
 .schedule-overview {
   margin: 20px 0px; }
@@ -55,7 +53,9 @@ hr {
     -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
     -webkit-transform: scale(1.25);
     -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
     -o-transform: scale(1.25);
+    transform: scale(1.25);
     position: relative;
     z-index: 5; }
   .ideas-sticky-notes li {

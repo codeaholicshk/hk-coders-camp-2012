@@ -1,32 +1,35 @@
+@import "colours"
+
 body
   margin-top: 60px
   font-size: 1em
-  
-.sidebar
-  min-height: 200px
-  min-width: 300px
-  border-left: 2px solid #CCCCCC
-  min-width: 200px
-  padding-left: 20px
+  background: $grey
 
-.homepage-banner
+section
+  margin-bottom: 20px
+  border-radius: 5px
+  padding: 5px
+  background: white
+
+  header
+    h2
+      margin-top: 0
+      margin-bottom: 0
+
+    margin-bottom: 5px
+    border-bottom: 2px dotted $red
+
+.banner
   padding: 10px 0px
-  border: 3px solid #ED5824
-  border-radius: 5px 5px 5px 5px
-  box-shadow: 2px 2px 3px #ED5824
-  background: -moz-linear-gradient(center top , #FEFEFE, #EEEEEE) repeat scroll 0 0 transparent
-  
-.tagline
-  margin: 30px 10px
-  text-align: center
-  
-.section-header
-  margin-bottom: 10px
-  span
-    padding-left: 5px
-    padding-right: 25px
-    border-bottom: solid 2px #ED5824
-  
+  border: 20px double $red
+
+  h1, h2, h3, h4
+    margin: 30px 10px
+    text-align: center
+
+.thumbnail
+  background: $white
+
 .schedule-overview
   margin: 20px 0px
   td
@@ -44,25 +47,30 @@ body
 
 hr
   margin: 30px 0px
-  
+
 .ideas-sticky-notes
   overflow: hidden
   padding: 15px
   list-style: none
-    
+
   li a:hover, li a:focus
+
     box-shadow: 10px 10px 7px rgba(0,0,0,.7)
     -moz-box-shadow: 10px 10px 7px rgba(0,0,0,.7)
     -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7)
+
     -webkit-transform: scale(1.25)
-    -moz-transform: scale(1.25)
-    -o-transform: scale(1.25)
+    -moz-transform:    scale(1.25)
+    -ms-transform:     scale(1.25)
+    -o-transform:      scale(1.25)
+    transform:         scale(1.25)
+
     position: relative
     z-index: 5
-    
+
   li
     list-style: none
-  
+
   li a
     text-decoration: none
     color: #000
@@ -71,31 +79,33 @@ hr
     height: 10em
     width: 10em
     padding: 20px
+
     -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1)
     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7)
     box-shadow: 5px 5px 7px rgba(33,33,33,.7)
+
     -moz-transition: -moz-transform .15s linear
     -o-transition: -o-transform .15s linear
     -webkit-transition: -webkit-transform .15s linear
-  
+
   li
     margin: 1em
     float: left
-  
+
   li h2
     font-size: 2em
     font-weight: bold
     padding-bottom: 10px
-  
+
   li p
     font-family: "Reenie Beanie",arial,sans-serif
     font-size: 180%
-  
+
   li a
     -webkit-transform: rotate(-6deg)
     -o-transform: rotate(-6deg)
     -moz-transform: rotate(-6deg)
-  
+
   li:nth-child(even) a
     -o-transform: rotate(4deg)
     -webkit-transform: rotate(4deg)
@@ -103,7 +113,7 @@ hr
     position: relative
     top: 5px
     background: #cfc
-  
+
   li:nth-child(3n) a
     -o-transform: rotate(-3deg)
     -webkit-transform: rotate(-3deg)
