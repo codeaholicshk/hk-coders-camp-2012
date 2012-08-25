@@ -77,7 +77,7 @@ class HkCodersCamp2012 < Padrino::Application
     if ENV["RACK_ENV"] == 'production'
       provider :github, '55122c136440e77227e1', 'd8a221c4b83dc6f6c0aa3127818370d28225d57f', skip_info: true
     else
-      provider :github, 'f6d7ac6b72039e469c32', '95dce884b45bd3aec4ce6bb29fa923c8b25477e0', skip_info: true
+      provider :github, 'f6d7ac6b72039e469c32', '95dce884b45bd3aec4ce6bb29fa923c8b25477e0', {skip_info: true, :client_options => {:ssl => {:verify => false}}}      
     end
   end
 
