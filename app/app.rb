@@ -1,6 +1,6 @@
 require 'rack-mini-profiler'
 class HkCodersCamp2012 < Padrino::Application
-  use Rack::MiniProfiler
+  use Rack::MiniProfiler if ENV["RACK_ENV"] == 'development' 
   register SassInitializer
   register Padrino::Rendering
   register Padrino::Mailer
