@@ -1,18 +1,24 @@
-.row
-  .span7
-    .content
-      %h2.title= @idea.name 
-      .inner
-        .group
-          %h4 Description:
-          = @idea.description
-  
-        .group
-          %h4 Cool Things:
-          %ul
-            - @idea.cool_things.each do |cool_thing|
-              %li= cool_thing
-            
-  .span4
-    %h4 Proposed by:
-    = gravatar_span @idea.published_by_account 
+.content
+  %h2.title.clearfix
+    .pull-left= @idea.name
+    .fb_share.pull-left
+      =link_to "", "http://www.facebook.com/sharer.php", :class => "pull-left idea-fb-share-button", :name => "fb_share", :type => "button_count", :share_url => request.url
+      %script{ :type => "text/javascript", :src  => "http://static.ak.fbcdn.net/connect.php/js/FB.Share" }
+
+  %hr
+    .row
+      .span7      
+        .inner
+          .group
+            %h4 Description:
+            = @idea.description
+    
+          .group
+            %h4 Cool Things:
+            %ul
+              - @idea.cool_things.each do |cool_thing|
+                %li= cool_thing
+              
+      .span4
+        %h4 Proposed by:
+        .span3= gravatar_span @idea.published_by_account 

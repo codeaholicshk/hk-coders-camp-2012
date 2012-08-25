@@ -117,3 +117,7 @@ hr {
     position: relative;
     top: -5px;
     background: #FFDDAA; }
+    
+.fb_share {
+	margin-left: 50px;
+}
