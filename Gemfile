@@ -33,6 +33,7 @@ group :test do
   gem "factory_girl", "~> 4.0"
   gem 'database_cleaner'
   gem 'webrat'
+  gem 'simplecov'
 end
 
 group :development do

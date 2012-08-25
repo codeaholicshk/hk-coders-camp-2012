@@ -1,8 +1,12 @@
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
 require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
 
+require 'simplecov'
+SimpleCov.start
+
 RSpec.configure do |config|
   config.include Rack::Test::Methods
+  config.include Webrat::Methods
   config.include Webrat::Matchers
 
   config.before(:suite) do
