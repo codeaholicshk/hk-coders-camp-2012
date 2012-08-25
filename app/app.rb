@@ -1,4 +1,7 @@
-require 'rack-mini-profiler'
+ if ENV["RACK_ENV"] == 'development'
+  require 'rack-mini-profiler'
+end
+
 class HkCodersCamp2012 < Padrino::Application
   use Rack::MiniProfiler if ENV["RACK_ENV"] == 'development' 
   register SassInitializer
