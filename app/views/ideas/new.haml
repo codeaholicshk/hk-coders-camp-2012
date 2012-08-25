@@ -2,6 +2,6 @@
   .content
     %h2.title Propose idea
     .inner
-      -form_for :idea, url(:ideas, :create), :class => :form do |f|
-        =partial "ideas/form", :locals => { :f => f }
+      -form_for :idea, url(:ideas, :create), class: :form do |f|
+        =partial "ideas/form", locals: { f: f }
 

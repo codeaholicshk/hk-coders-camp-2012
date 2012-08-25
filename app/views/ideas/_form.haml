@@ -1,12 +1,12 @@
 .group
   =f.label "Topic in one sentense"
   =f.error_message_on :name
-  =f.text_field :name, :class => :text_field
+  =f.text_field :name, class: :text_field
 
 .group
   =f.label :description
   =f.error_message_on :description
-  =f.text_field :description, :class => :text_field
+  =f.text_field :description, class: :text_field
   %span.description has to be related to coding
 
 .group
@@ -16,5 +16,5 @@
     = f.text_field :cool_thing
 
 .group.navform.wat-cf
-  =f.submit pat(:save), :class => :button
-  =f.submit pat(:cancel), :onclick => "window.location='#{url(:ideas, :index)}';return false", :class => :button
+  =f.submit pat(:save), class: :button
+  =f.submit pat(:cancel), onclick: "window.location='#{url(:ideas, :index)}';return false", class: :button

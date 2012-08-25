@@ -8,7 +8,7 @@
       =pat(:new)
       =mt(:idea)
     .inner
-      -form_for :idea, url(:ideas, :create), :class => :form do |f|
-        =partial "ideas/form", :locals => { :f => f }
+      -form_for :idea, url(:ideas, :create), class: :form do |f|
+        =partial "ideas/form", locals: { f: f }
 
 -content_for :sidebar, partial("base/sidebar")

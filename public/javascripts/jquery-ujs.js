@@ -4,7 +4,7 @@
 **/
 
 /* Remote Form Support
- * form_for @user, '/user', :remote => true
+ * form_for @user, '/user', remote: true
 **/
 
 $("form[data-remote=true]").live('submit', function(e) {
@@ -12,16 +12,16 @@ $("form[data-remote=true]").live('submit', function(e) {
   var element = $(this);
   var message = element.data('confirm');
   if (message && !confirm(message)) { return false; }
-  JSAdapter.sendRequest(element, { 
-    verb: element.data('method') || element.attr('method') || 'post', 
-    url: element.attr('action'), 
+  JSAdapter.sendRequest(element, {
+    verb: element.data('method') || element.attr('method') || 'post',
+    url: element.attr('action'),
     dataType: element.data('type') || ($.ajaxSettings && $.ajaxSettings.dataType) || 'script',
     params: element.serializeArray()
   });
 });
 
 /* Confirmation Support
- * link_to 'sign out', '/logout', :confirm => "Log out?"
+ * link_to 'sign out', '/logout', confirm: "Log out?"
 **/
 
 $("a[data-confirm]").live('click', function(e) {
@@ -29,24 +29,24 @@ $("a[data-confirm]").live('click', function(e) {
   if (!confirm(message)) { e.preventDefault(); e.stopped = true; }
 });
 
-/* 
- * Link Remote Support 
- * link_to 'add item', '/create', :remote => true
+/*
+ * Link Remote Support
+ * link_to 'add item', '/create', remote: true
 **/
 
 $("a[data-remote=true]").live('click', function(e) {
-  var element = $(this); 
+  var element = $(this);
   if (e.stopped) return;
   e.preventDefault(); e.stopped = true;
-  JSAdapter.sendRequest(element, { 
-    verb: element.data('method') || 'get', 
+  JSAdapter.sendRequest(element, {
+    verb: element.data('method') || 'get',
     url: element.attr('href')
   });
 });
 
-/* 
+/*
  * Link Method Support
- * link_to 'delete item', '/destroy', :method => :delete
+ * link_to 'delete item', '/destroy', method: :delete
 **/
 
 $("a[data-method]:not([data-remote])").live('click', function(e) {

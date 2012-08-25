@@ -1,9 +1,9 @@
 .block
   .secondary-navigation.pull-right
     - if current_account.nil?
-      =link_to( "Register with your Github", '/auth/github', :class => "btn btn-large")
+      =link_to( "Register with your Github", '/auth/github', class: "btn btn-large")
     - else
-      =link_to( "Invite your friends", '#', :class => "btn btn-large")
+      =link_to( "Invite your friends", '#', class: "btn btn-large")
   .content
     %h2.title
       Registered Coders

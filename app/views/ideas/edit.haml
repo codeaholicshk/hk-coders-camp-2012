@@ -7,5 +7,5 @@
       =pat(:edit)
       =mt(:idea)
     .inner
-      -form_for :idea, url(:ideas, :update, :id => @idea.id), :method => :put, :class => :form do |f|
-        =partial "ideas/form", :locals => { :f => f }
+      -form_for :idea, url(:ideas, :update, id: @idea.id), method: :put, class: :form do |f|
+        =partial "ideas/form", locals: { f: f }

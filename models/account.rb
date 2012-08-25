@@ -3,39 +3,39 @@ class Account
   attr_accessor :password, :password_confirmation
 
   # Fields
-  field :name,             :type => String
-  field :surname,          :type => String
-  field :email,            :type => String
-  field :crypted_password, :type => String
-  field :role,             :type => String
-  field :uid,              :type => String
-  field :provider,         :type => String
-  field :bio,              :type => String
-  field :gravatar_id,      :type => String
-  field :blog_url,         :type => String
-  field :github_page,      :type => String  
+  field :name,             type: String
+  field :surname,          type: String
+  field :email,            type: String
+  field :crypted_password, type: String
+  field :role,             type: String
+  field :uid,              type: String
+  field :provider,         type: String
+  field :bio,              type: String
+  field :gravatar_id,      type: String
+  field :blog_url,         type: String
+  field :github_page,      type: String
 
   index(
     {uid: 1, provider: 1},
     {unique: true}
   )
-  
+
   has_many :ideas, as: :published_ideas
-  
+
   # Validations
   validates_presence_of     :role
-  validates_presence_of     :email,                      :if => :email_required?
-  validates_presence_of     :password,                   :if => :password_required?
-  validates_presence_of     :password_confirmation,      :if => :password_required?
-  validates_length_of       :password, :within => 4..40, :if => :password_required?
-  validates_confirmation_of :password,                   :if => :password_required?
-  validates_length_of       :email,    :within => 3..100, :if => :email_required?
-  validates_uniqueness_of   :email,    :case_sensitive => false, :if => :email_required?
-  validates_format_of       :email,    :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :if => :email_required?
-  validates_format_of       :role,     :with => /[A-Za-z]/
+  validates_presence_of     :email,                      if: :email_required?
+  validates_presence_of     :password,                   if: :password_required?
+  validates_presence_of     :password_confirmation,      if: :password_required?
+  validates_length_of       :password, within: 4..40, if: :password_required?
+  validates_confirmation_of :password,                   if: :password_required?
+  validates_length_of       :email,    within: 3..100, if: :email_required?
+  validates_uniqueness_of   :email,    case_sensitive: false, if: :email_required?
+  validates_format_of       :email,    with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, if: :email_required?
+  validates_format_of       :role,     with: /[A-Za-z]/
 
   # Callbacks
-  before_save :encrypt_password, :if => :password_required?
+  before_save :encrypt_password, if: :password_required?
 
   ##
   # This method is for authentication purpose
@@ -64,11 +64,11 @@ class Account
   def password_required?
     !using_oauth? && (crypted_password.blank? || self.password.present?)
   end
-  
+
   def email_required?
     !using_oauth?
   end
-  
+
   def self.create_with_omniauth(auth)
     create! do |account|
       account.provider    = auth["provider"]
@@ -81,10 +81,10 @@ class Account
       account.role        = "users"
     end
   end
-  
+
   private
-  
-  def using_oauth? 
+
+  def using_oauth?
     provider.present?
   end
 end

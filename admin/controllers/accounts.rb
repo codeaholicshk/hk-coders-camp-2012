@@ -14,28 +14,28 @@ Admin.controllers :accounts do
     @account = Account.new(params[:account])
     if @account.save
       flash[:notice] = 'Account was successfully created.'
-      redirect url(:accounts, :edit, :id => @account.id)
+      redirect url(:accounts, :edit, id: @account.id)
     else
       render 'accounts/new'
     end
   end
 
-  get :edit, :with => :id do
+  get :edit, with: :id do
     @account = Account.find(params[:id])
     render 'accounts/edit'
   end
 
-  put :update, :with => :id do
+  put :update, with: :id do
     @account = Account.find(params[:id])
     if @account.update_attributes(params[:account])
       flash[:notice] = 'Account was successfully updated.'
-      redirect url(:accounts, :edit, :id => @account.id)
+      redirect url(:accounts, :edit, id: @account.id)
     else
       render 'accounts/edit'
     end
   end
 
-  delete :destroy, :with => :id do
+  delete :destroy, with: :id do
     account = Account.find(params[:id])
     if account != current_account && account.destroy
       flash[:notice] = 'Account was successfully destroyed.'
