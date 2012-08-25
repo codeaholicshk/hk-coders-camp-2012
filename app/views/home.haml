@@ -1,6 +1,6 @@
-.row
+%article.row
   .span9
-    %section.banner
+    %header.banner
       %h1 Hong Kong Coders Camp 2012
       %h2 ~ 24 Hours Iterative Coding ~
       %h4 Date: 12 Oct (Fri) ~ 13 Oct (Sat)
@@ -32,34 +32,24 @@
         %h2 Schedule
 
       %table.schedule-overview
-        %tr
-          %td 20 Aug ~ 23 Sep
-          %td 24 Sep ~ 30 Sep
-          %td 31 Sep ~ 12 Oct
-          %td 12 Oct ~ 13 Oct
-        %tr
-          %td
-            =link_to "Idea Election", "#"
-          %td
-            =link_to "Finalists Annoucement", "#"
-          %td
-            =link_to "Team Formation", "#"
-          %td
-            =link_to "CODE", "#"
+        %thead
+          %tr
+            %th 20 Aug ~ 23 Sep
+            %th 24 Sep ~ 30 Sep
+            %th 31 Sep ~ 12 Oct
+            %th 12 Oct ~ 13 Oct
+        %tbody
+          %tr
+            %td= link_to "Idea Election", "#"
+            %td= link_to "Finalists Annoucement", "#"
+            %td= link_to "Team Formation", "#"
+            %td= link_to "CODE", "#"
 
-    %h3 Stage 1. Idea Election
-    %p
-
-    %h3 Stage 2. Shortlisting Project list
-    %p
-
-    %h3 Stage 3. Team Formation
-    %p
-
-    %h3 Stage 4. Code
-    %p
-
-    %hr
+      %ol
+        %li Stage 1. Idea Election
+        %li Stage 2. Shortlisting Project list
+        %li Stage 3. Team Formation
+        %li Stage 4. Code
 
     %section
       %header
@@ -116,7 +106,7 @@
         =link_to "Proposal", "http://codeaholics-hk-camp-2012.herokuapp.com/"
 
   .span3
-    .well
+    %aside.well
       %h3 Wanna join ?
       %p
         Register with your
