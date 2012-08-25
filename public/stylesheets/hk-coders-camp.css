@@ -103,3 +103,17 @@ hr {
     position: relative;
     top: -5px;
     background: #ccccff; }
+  .ideas-sticky-notes li:nth-child(7n) a {
+    -o-transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    position: relative;
+    top: -5px;
+    background: #DDFFFF; }    
+  .ideas-sticky-notes li:nth-child(8n) a {
+    -o-transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    position: relative;
+    top: -5px;
+    background: #FFDDAA; }

@@ -1,20 +1,21 @@
 .group
   =f.label "Topic in one sentense"
   =f.error_message_on :name
-  =f.text_field :name, class: :text_field
+  =f.text_field :name, class: "text_field input-xxlarge"
 
 .group
   =f.label :description
   =f.error_message_on :description
-  =f.text_field :description, class: :text_field
-  %span.description has to be related to coding
+  =f.text_area :description, class: "text_field input-xxlarge"
+  %span.help-inline has to be related to coding
 
 .group
-  =f.label "3 cool things about this idea"
+  =f.label "Tell us 3 cool things about this idea"
   =f.error_message_on :cool_things
   - @idea.cool_things.each do |cool_thing|
-    = f.text_field :cool_thing
+    = f.text_field :cool_things, value: cool_thing, name: "idea[cool_things][]", class: "text_field input-xxlarge"
+    %br
 
 .group.navform.wat-cf
-  =f.submit pat(:save), class: :button
-  =f.submit pat(:cancel), onclick: "window.location='#{url(:ideas, :index)}';return false", class: :button
+  =f.submit pat(:save), class: "btn btn-primary btn-large"
+  =f.submit pat(:cancel), onclick: "window.location='#{url(:ideas, :index)}';return false", class: "btn"

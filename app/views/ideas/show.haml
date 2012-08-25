@@ -1,0 +1,18 @@
+.row
+  .span7
+    .content
+      %h2.title= @idea.name 
+      .inner
+        .group
+          %h4 Description:
+          = @idea.description
+  
+        .group
+          %h4 Cool Things:
+          %ul
+            - @idea.cool_things.each do |cool_thing|
+              %li= cool_thing
+            
+  .span4
+    %h4 Proposed by:
+    = gravatar_span @idea.published_by_account 
