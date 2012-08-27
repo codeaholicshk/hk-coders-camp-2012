@@ -1,9 +1,7 @@
-%article.post
+%article.panel
   %header
     %h1.title
       = link_to post.title, url_for(:posts, :show, id: post)
     %small.date #{post.created_at.to_s(:short)}
 
   .body= markdown(post.body)
-
-%hr
