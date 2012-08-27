@@ -18,5 +18,10 @@
 -content_for :javascripts do
   :javascript
     jQuery(function($){
-      $(".coder").shuffle();
+      var shuffleCoders = function(){
+        $(".coder").shuffle();
+      }
+
+      shuffleCoders();
+
     });
