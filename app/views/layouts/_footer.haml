@@ -14,7 +14,7 @@
 :javascript
   window.jQuery || addJS("#{js_escape_html javascript_include_tag(:jquery) }");
 
-= javascript_include_tag "jquery.shuffle"
+= javascript_include_tag "jquery.shuffle.min", "jquery.masonry.min"
 
 = yield_content :javascripts
 

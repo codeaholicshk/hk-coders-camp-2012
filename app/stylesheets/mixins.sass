@@ -19,12 +19,12 @@
   -o-transition:           -o-transform $a $b
   transition:                 transform $a $b
 
-@mixin transition-property($props)
-  -webkit-transition-property: $props
-  -moz-transition-property:    $props
-  -ms-transition-property:     $props
-  -o-transition-property:      $props
-  transition-property:         $props
+@mixin transition-property($p1, $p2, $p3)
+  -webkit-transition-property: $p1, $p2, $p3
+  -moz-transition-property:    $p1, $p2, $p3
+  -ms-transition-property:     $p1, $p2, $p3
+  -o-transition-property:      $p1, $p2, $p3
+  transition-property:         $p1, $p2, $p3
 
 @mixin transition-duration($props)
   -webkit-transition-duration: $props

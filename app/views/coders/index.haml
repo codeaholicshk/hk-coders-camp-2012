@@ -10,8 +10,8 @@
 
   %ul.thumbnails.coders
     - @coders.each do |coder|
-      %li.span3
-        .thumbnail.coder
+      %li.span3.coder
+        .thumbnail
           = gravatar_tag(coder, size: 210)
           %h3= link_to coder.name, coder.github_page
 
@@ -24,4 +24,10 @@
 
       shuffleCoders();
 
+      var $coders = $('.coders');
+      $coders.imagesLoaded(function(){
+        $coders.masonry({
+          itemSelector : '.coder'
+        });
+      });
     });
