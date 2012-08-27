@@ -8,7 +8,6 @@
   <!--<![endif]-->
   %head
     %meta{ charset: "utf-8"}
-    %link{ rel: "shortcut icon", href: "/favicon.ico", type: "image/x-icon"}/
     %meta{ content: "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
     %meta{ name: 'author', content: "Matthew Rudy Jacobs, Eddie Lau" }/
     %meta{ name: 'description', content: "24 Hours Coders Camp for Hong Kong. 12 Oct 2012(Fri) to 13 Oct 2012(Sat). By community and for community." }/
@@ -19,6 +18,12 @@
     %meta{ name: 'language', content: 'en' }/
     %meta{ name: 'googlebot', content: 'index, follow' }/
     %meta{ name: 'revisit-after', content: '2 days' }/
+
+    = favicon_tag("favicon.png")
+    = favicon_tag("favicon.ico")
+    = favicon_tag("apple-touch-icon.png",       rel: "apple-touch-icon", type: "image/png")
+    = favicon_tag("apple-touch-icon-72x72.png", rel: "apple-touch-icon", type: "image/png", sizes: "72x72")
+    = favicon_tag("apple-touch-icon-114x114.png", rel: "apple-touch-icon", type: "image/png", sizes: "114x114")
 
 
     / Le HTML5 shim, for IE6-8 support of HTML elements
