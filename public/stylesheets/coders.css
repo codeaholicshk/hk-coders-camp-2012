@@ -1,7 +1,12 @@
 .coder {
   text-align: center;
-  -webkit-transition: -webkit-transform 0.15s linear;
-  -moz-transition: -moz-transform 0.15s linear;
-  -ms-transition: -ms-transform 0.15s linear;
-  -o-transition: -o-transform 0.15s linear;
-  transition: transform 0.15s linear; }
+  -webkit-transition-property: left right top;
+  -moz-transition-property: left right top;
+  -ms-transition-property: left right top;
+  -o-transition-property: left right top;
+  transition-property: left right top;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s; }

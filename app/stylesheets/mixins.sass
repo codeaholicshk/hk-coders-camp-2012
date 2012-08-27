@@ -19,6 +19,20 @@
   -o-transition:           -o-transform $a $b
   transition:                 transform $a $b
 
+@mixin transition-property($props)
+  -webkit-transition-property: $props
+  -moz-transition-property:    $props
+  -ms-transition-property:     $props
+  -o-transition-property:      $props
+  transition-property:         $props
+
+@mixin transition-duration($props)
+  -webkit-transition-duration: $props
+  -moz-transition-duration:    $props
+  -ms-transition-duration:     $props
+  -o-transition-duration:      $props
+  transition-duration:         $props
+
 @mixin rotate($deg)
   -webkit-transform: rotate($deg)
   -moz-transform:    rotate($deg)
