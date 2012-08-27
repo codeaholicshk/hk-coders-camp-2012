@@ -1,13 +1,14 @@
 body {
   margin-top: 60px;
   font-size: 1em;
-  background: whitesmoke; }
+  background: #dddddd; }
 
-section, .banner {
+section, aside, .banner {
   margin-bottom: 20px;
   border-radius: 5px;
-  padding: 5px;
-  background: white; }
+  padding: 5px 20px 10px;
+  background: white;
+  border: 1px solid #dd4814; }
 
 section header {
   margin-bottom: 5px;
@@ -103,21 +104,3 @@ hr {
     position: relative;
     top: -5px;
     background: #ccccff; }
-  .ideas-sticky-notes li:nth-child(7n) a {
-    -o-transform: rotate(-1deg);
-    -webkit-transform: rotate(-1deg);
-    -moz-transform: rotate(-1deg);
-    position: relative;
-    top: -5px;
-    background: #DDFFFF; }    
-  .ideas-sticky-notes li:nth-child(8n) a {
-    -o-transform: rotate(-1deg);
-    -webkit-transform: rotate(-1deg);
-    -moz-transform: rotate(-1deg);
-    position: relative;
-    top: -5px;
-    background: #FFDDAA; }
-    
-.fb_share {
-	margin-left: 50px;
-}

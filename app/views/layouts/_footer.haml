@@ -1,9 +1,4 @@
 :javascript
-
-  var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-34237920-1']);
-      _gaq.push(['_trackPageview']);
-
   var addJS = function(src) {
     var s = document.createElement('script');
     s.type = 'text/javascript';
@@ -12,6 +7,17 @@
     var p = document.getElementsByTagName('script')[0];
     p.parentNode.insertBefore(s, p);
   };
+
+= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+
+:javascript
+  window.jQuery || addJS("#{js_escape_html javascript_include_tag(:jquery) }");
+
+:javascript
+
+  var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34237920-1']);
+      _gaq.push(['_trackPageview']);
 
   addJS('https://ssl.google-analytics.com/ga.js');
   addJS('https://apis.google.com/js/plusone.js');
