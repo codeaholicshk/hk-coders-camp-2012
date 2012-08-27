@@ -20,8 +20,10 @@
     jQuery(function($){
       var shuffleCoders = function(){
         $(".coder").shuffle();
-        $(".coders.masonry("reload");
+        $(".coders").masonry("reload");
       }
+
+      $(".coder").shuffle();
 
       var $coders = $('.coders');
       $coders.imagesLoaded(function(){
@@ -31,7 +33,6 @@
 
         setInterval(function(){
           shuffleCoders();
-          $(".coders").masonry("reload");
         }, 10000);
       });
     });
