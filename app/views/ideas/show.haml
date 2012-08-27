@@ -1,24 +1,22 @@
-.content
-  %h2.title.clearfix
-    .pull-left= @idea.name
-    .fb_share.pull-left
-      = partial "/social"
+%article.row
+  .span9
+    .panel
 
-  %hr
-    .row
-      .span7
-        .inner
-          .group
-            %h4 Description:
-            = @idea.description
+      %header
+        %h1
+          = @idea.name
+          %small
+            by
+            = @idea.published_by_account.name
+            = gravatar_tag @idea.published_by_account, size: 50
 
-          .group
-            %h4 Cool Things:
-            %ul
-              %li= @idea.cool_thing1
-              %li= @idea.cool_thing2
-              %li= @idea.cool_thing3
+      %p= @idea.description
 
-      .span4
-        %h4 Proposed by:
-        .span3= gravatar_span @idea.published_by_account
+      %ol
+        %li= @idea.cool_thing1
+        %li= @idea.cool_thing2
+        %li= @idea.cool_thing3
+
+  .span3
+    .panel
+      %aside= partial "/social"

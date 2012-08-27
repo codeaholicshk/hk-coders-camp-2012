@@ -1,17 +1,22 @@
-.block
-  .secondary-navigation.pull-right
-    - if current_account.nil?
-      =link_to( "Register with your Github", '/auth/github', class: "btn btn-large")
-    - else
-      =link_to( "Invite your friends", '#', class: "btn btn-large")
-  .content
-    %h2.title
-      Registered Coders
-    .inner
-      %ul.thumbnails
-        - @coders.each do |coder|
-          %li.span3
-            .thumbnail
-              = gravatar_tag(coder, size: 210)
-              %h3= link_to coder.name, coder.github_page
+- if current_account.nil?
+  %aside.pull-right
+    =link_to( "Register", register_path, class: "btn btn-large")
 
+%article
+  %header
+    %h1
+      Registered Coders
+
+
+  %ul.thumbnails.coders
+    - @coders.each do |coder|
+      %li.span3
+        .thumbnail.coder
+          = gravatar_tag(coder, size: 210)
+          %h3= link_to coder.name, coder.github_page
+
+-content_for :javascripts do
+  :javascript
+    jQuery(function($){
+      $(".coder").shuffle();
+    });

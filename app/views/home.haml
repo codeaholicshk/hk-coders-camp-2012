@@ -8,9 +8,9 @@
       %h4 Venue: To Be Confirmed
 
       .homepage-action-buttons
-        =link_to "Register Now", "#", class: "btn btn-large"
+        =link_to "Register Now", register_path, class: "btn btn-large"
 
-    %section
+    %section.panel
       %header
         %h2 How does it work
 
@@ -26,7 +26,7 @@
       %p
         But we try our best to make sure you will have a great time with other coders.
 
-    %section
+    %section.panel
       %header
         %h2 Schedule
 
@@ -64,7 +64,8 @@
             %li standup_at: [22:00, 13:00, 17:00]
             %li You are encouraged to stay overnight, sleeping bags will be ready.
             %li At the end (19:00, 13th Oct), each team is going to give a short presentation about what they have done in last 24 hours. (just a hint ... coders like demo more than slideshow ^__^)
-    %section
+
+    %section.panel
       %header
         %h2 What to build
 
@@ -72,7 +73,7 @@
       %p We don't give a shit about the business model.
       %p We just want you to build something fun together.
 
-    %section
+    %section.panel
       %header
         %h2 Why ?
 
@@ -83,7 +84,7 @@
       %p
         Just come and do something. I don't have to give you reason at all.
 
-    %section
+    %section.panel
       %header
         %h2 Who can join ?
 
@@ -93,7 +94,7 @@
         The event is programming language agnostic. You can pick whatever you like from your toolbox to make it happen.
 
 
-    %section
+    %section.panel
       %header
         %h2 Sponsors
 
@@ -102,7 +103,7 @@
         %li Hooko
         %li ... (let us know if you would like to sponsor us)
 
-    %section
+    %section.panel
       %header
         %h2 Equipment
       %p
@@ -113,7 +114,7 @@
         %li lunch and dinner ( very likely Pizza and Salad )
         %li snacks and drinks ( beer, redbull, ...)
 
-    %section
+    %section.panel
       %header
         %h2 You have a question ?
       %p
@@ -130,10 +131,10 @@
     %figure
       = image_tag("camp_logo.png")
 
-    %aside
+    %aside.panel
       %h3 Wanna join ?
       %p
         Register with your
-        =link_to( image_tag("github.png", title: "Github OAuth"), '/auth/github')
+        =link_to( image_tag("github.png", title: "Github OAuth"), register_path)
 
       = partial "social"

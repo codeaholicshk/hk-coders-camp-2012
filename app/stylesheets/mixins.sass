@@ -12,6 +12,13 @@
   -o-transform:      $a
   transform:         $a
 
+@mixin transition($a, $b)
+  -webkit-transition: -webkit-transform $a $b
+  -moz-transition:       -moz-transform $a $b
+  -ms-transition:         -ms-transform $a $b
+  -o-transition:           -o-transform $a $b
+  transition:                 transform $a $b
+
 @mixin rotate($deg)
   -webkit-transform: rotate($deg)
   -moz-transform:    rotate($deg)
