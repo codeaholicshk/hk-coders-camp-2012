@@ -1,7 +1,8 @@
-.block
-  .content
-    %h2.title Propose idea
-    .inner
-      -form_for :idea, url(:ideas, :create), class: :form do |f|
-        =partial "ideas/form", locals: { f: f }
+%section
+
+  %header
+    %h1 My Idea
+
+  -form_for :idea, url(:ideas, :create), class: "form form-horizontal" do |f|
+    =partial "ideas/form", locals: { f: f }
 

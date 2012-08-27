@@ -16,6 +16,7 @@ gem 'foreman'
 # html + css
 gem 'sass'
 gem 'haml'
+gem 'redcarpet'
 
 # datastore
 gem 'mongoid'

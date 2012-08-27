@@ -2,23 +2,23 @@
   %h2.title.clearfix
     .pull-left= @idea.name
     .fb_share.pull-left
-      =link_to "", "http://www.facebook.com/sharer.php", :class => "pull-left idea-fb-share-button", :name => "fb_share", :type => "button_count", :share_url => request.url
-      %script{ :type => "text/javascript", :src  => "http://static.ak.fbcdn.net/connect.php/js/FB.Share" }
+      = partial "/social"
 
   %hr
     .row
-      .span7      
+      .span7
         .inner
           .group
             %h4 Description:
             = @idea.description
-    
+
           .group
             %h4 Cool Things:
             %ul
-              - @idea.cool_things.each do |cool_thing|
-                %li= cool_thing
-              
+              %li= @idea.cool_thing1
+              %li= @idea.cool_thing2
+              %li= @idea.cool_thing3
+
       .span4
         %h4 Proposed by:
-        .span3= gravatar_span @idea.published_by_account 
+        .span3= gravatar_span @idea.published_by_account

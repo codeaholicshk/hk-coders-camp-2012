@@ -5,7 +5,9 @@ class Idea
   # field <name>, type: <type>, default: <value>
   field :name, type: String
   field :description, type: String
-  field :cool_things, type: Array
+  field :cool_thing1, type: String
+  field :cool_thing2, type: String
+  field :cool_thing3, type: String
 
   belongs_to :published_by_account, :class_name => "Account", inverse_of: :published_ideas
   embeds_many :comments
@@ -15,13 +17,7 @@ class Idea
 
   # You can create a composite key in mongoid to replace the default id using the key macro:
   # key :field <, :another_field, :one_more ....>
-  
-  validates_presence_of :name, :description
-  validate :validate_cool_things
 
-  def validate_cool_things
-    filtered_array = self.cool_things.compact!
-    errors.add(:cool_things, 'Cannot be blank') unless filtered_array.size == 3
-  end
+  validates_presence_of :name, :description, :cool_thing1, :cool_thing2, :cool_thing3
 
 end

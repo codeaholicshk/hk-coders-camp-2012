@@ -8,7 +8,6 @@ HkCodersCamp2012.controllers :ideas do
 
   get :new do
     @idea = current_account.published_ideas.new
-    @idea.cool_things = Array.new(3)
     render 'ideas/new'
   end
 

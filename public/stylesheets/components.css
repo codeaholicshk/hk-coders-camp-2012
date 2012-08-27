@@ -1,0 +1,10 @@
+.panel {
+  padding: 0; }
+  .panel header {
+    margin-bottom: 5px;
+    border-bottom: 2px dotted #dd4814; }
+    .panel header h2 {
+      margin-top: 0;
+      margin-bottom: 0; }
+  .panel .body {
+    padding: 0 20px 20px; }

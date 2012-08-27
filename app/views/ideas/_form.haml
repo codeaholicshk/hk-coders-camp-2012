@@ -1,21 +1,31 @@
-.group
-  =f.label "Topic in one sentense"
-  =f.error_message_on :name
-  =f.text_field :name, class: "text_field input-xxlarge"
+.form-fields
+  %fieldset
+    %legend The Idea
 
-.group
-  =f.label :description
-  =f.error_message_on :description
-  =f.text_area :description, class: "text_field input-xxlarge"
-  %span.help-inline has to be related to coding
+    - [:name, :description].each do |field|
 
-.group
-  =f.label "Tell us 3 cool things about this idea"
-  =f.error_message_on :cool_things
-  - @idea.cool_things.each do |cool_thing|
-    = f.text_field :cool_things, value: cool_thing, name: "idea[cool_things][]", class: "text_field input-xxlarge"
-    %br
+      .control-group
+        =f.label field, class: "control-label"
 
-.group.navform.wat-cf
-  =f.submit pat(:save), class: "btn btn-primary btn-large"
-  =f.submit pat(:cancel), onclick: "window.location='#{url(:ideas, :index)}';return false", class: "btn"
+        .controls
+          =f.text_field field, class: "text_field span6", required: true
+          %span.help-inline
+            =f.error_message_on field
+
+  %fieldset
+    %legend 3 Cool Things
+
+    - 1.upto(3) do |i|
+      - field = "cool_thing#{i}"
+
+      .control-group
+        =f.label field, class: "control-label"
+
+        .controls
+          =f.text_field field, class: "text_field span6", required: true
+          %span.help-inline
+            =f.error_message_on field
+
+.form-actions
+  = f.submit pat(:save), class: "btn btn-primary"
+  = link_to pat(:cancel), url(:ideas, :index), class: "btn"

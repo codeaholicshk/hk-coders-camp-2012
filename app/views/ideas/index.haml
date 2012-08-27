@@ -6,10 +6,10 @@
       =link_to "Propose idea", url(:ideas, :new), class: "btn btn-large"
   .content
     %h2.title Ideas
-    %ul.ideas-sticky-notes
+    %ul.stickies
       - @ideas.any? && @ideas.each do |idea|
         %li
-          = link_to url(:ideas, :show, id: idea) do
+          = link_to url(:ideas, :show, id: idea), class: "sticky" do
             %h2= idea.name
             .idea-desc= idea.description
             .idea-proposed

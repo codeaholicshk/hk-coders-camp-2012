@@ -1,11 +1,9 @@
-.post
-  .row
-    .span7
-      %h3.title= link_to post.title, url_for(:posts, :show, :id => post)
-    .span4
-      .date.pull-right= "Posted at #{post.created_at.to_s(:short)}"
-  .row
-    .span11    
-      .body= simple_format(post.body)
-  
+%article.post
+  %header
+    %h1.title
+      = link_to post.title, url_for(:posts, :show, id: post)
+    %small.date #{post.created_at.to_s(:short)}
+
+  .body= markdown(post.body)
+
 %hr
