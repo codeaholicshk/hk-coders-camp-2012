@@ -20,14 +20,18 @@
     jQuery(function($){
       var shuffleCoders = function(){
         $(".coder").shuffle();
+        $(".coders.masonry("reload");
       }
-
-      shuffleCoders();
 
       var $coders = $('.coders');
       $coders.imagesLoaded(function(){
         $coders.masonry({
           itemSelector : '.coder'
         });
+
+        setInterval(function(){
+          shuffleCoders();
+          $(".coders").masonry("reload");
+        }, 10000);
       });
     });
