@@ -7,7 +7,6 @@
     %h1
       Registered Coders
 
-
   %ul.thumbnails.coders
     - @coders.each do |coder|
       %li.span3.coder
@@ -25,14 +24,14 @@
 
       $(".coder").shuffle();
 
-      var $coders = $('.coders');
-      $coders.imagesLoaded(function(){
-        $coders.masonry({
-          itemSelector : '.coder'
-        });
-
-        setInterval(function(){
-          shuffleCoders();
-        }, 10000);
-      });
+      / var $coders = $('.coders');
+      / $coders.imagesLoaded(function(){
+      /   $coders.masonry({
+      /     itemSelector : '.coder'
+      /   });
+      / 
+      /   setInterval(function(){
+      /     shuffleCoders();
+      /   }, 10000);
+      / });
     });

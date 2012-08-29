@@ -4,34 +4,35 @@
   background: #ffffcc;
   display: block;
   padding: 20px;
+  border: 1px solid #eeeeee;
+  margin-bottom: 10px;
   -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
   -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
   -ms-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
   -o-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
   box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7); }
   .sticky.rotating {
-    height: 10em;
     -webkit-transition: -webkit-transform 0.15s linear;
     -moz-transition: -moz-transform 0.15s linear;
     -ms-transition: -ms-transform 0.15s linear;
     -o-transition: -o-transform 0.15s linear;
     transition: transform 0.15s linear;
-    -webkit-transform: rotate(-6deg);
-    -moz-transform: rotate(-6deg);
-    -ms-transform: rotate(-6deg);
-    -o-transform: rotate(-6deg);
-    transform: rotate(-6deg); }
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    transform: rotate(-1deg); }
     .sticky.rotating:hover, .sticky.rotating:focus {
       -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
       -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
       -ms-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
       -o-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
       box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
-      -webkit-transform: scale(1.25);
-      -moz-transform: scale(1.25);
-      -ms-transform: scale(1.25);
-      -o-transform: scale(1.25);
-      transform: scale(1.25);
+      -webkit-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      -o-transform: scale(1.5);
+      transform: scale(1.5);
       position: relative;
       z-index: 5; }
 

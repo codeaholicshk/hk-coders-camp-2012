@@ -7,9 +7,22 @@
   .content
     %h1 Ideas
     .stickies.row
-      - @ideas.any? && @ideas.each do |idea|
-        .span3
-          %a.sticky.rotating{href: url(:ideas, :show, id: idea)}
-            %article
-              %h2= idea.name
-              %p= idea.description
+      .ideas
+        - @ideas.any? && @ideas.each do |idea|
+          .span4.idea-note
+            %a.sticky.rotating{href: url(:ideas, :show, id: idea)}
+              %article
+                %h2= idea.name
+                %p= idea.description
+
+
+-content_for :javascripts do
+  :javascript
+    jQuery(function($){  
+      var shuffleIdeas = function(){
+        $(".idea-note").shuffle();
+        $(".ideas").masonry("reload");
+      }
+
+      $(".idea-note").shuffle();
+    });
