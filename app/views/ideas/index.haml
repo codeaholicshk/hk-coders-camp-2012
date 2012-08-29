@@ -8,7 +8,7 @@
     %h1 Ideas
     .stickies.row
       .ideas
-        - @ideas.any? && @ideas.each do |idea|
+        - @ideas.all.sort_by{ rand }.each do |idea|
           .span4.idea-note
             %a.sticky.rotating{href: url(:ideas, :show, id: idea)}
               %article
