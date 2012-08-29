@@ -11,7 +11,7 @@
         %ul#main-menu-right.nav.pull-right
           - if current_account
             %li
-              = link_to "users/profile" do
+              = link_to "#" do
                 = gravatar_tag(current_account, size: 20)
                 me
           - else

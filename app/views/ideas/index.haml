@@ -18,11 +18,11 @@
 
 -content_for :javascripts do
   :javascript
-    jQuery(function($){  
-      var shuffleIdeas = function(){
-        $(".idea-note").shuffle();
-        $(".ideas").masonry("reload");
-      }
-
-      $(".idea-note").shuffle();
+    jQuery(function($){
+      var $coders = $('.ideas');
+      $coders.imagesLoaded(function(){
+        $coders.masonry({
+          itemSelector : '.idea-note'
+        });
+      });
     });
