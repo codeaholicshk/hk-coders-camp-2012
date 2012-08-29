@@ -37,17 +37,7 @@
       z-index: 5; }
 
 .coder {
-  text-align: center;
-  -webkit-transition-property: left, right, top;
-  -moz-transition-property: left, right, top;
-  -ms-transition-property: left, right, top;
-  -o-transition-property: left, right, top;
-  transition-property: left, right, top;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s; }
+  text-align: center; }
 
 body {
   margin-top: 60px;
