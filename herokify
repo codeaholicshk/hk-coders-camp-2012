@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+git remote add heroku git@heroku.com:hk-coders-camp-2012.git
