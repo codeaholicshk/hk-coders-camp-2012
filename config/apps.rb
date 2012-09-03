@@ -34,3 +34,5 @@ end
 Padrino.mount("HkCodersCamp2012").to('/')
 
 Padrino.mount("Admin").to("/admin")
+
+Padrino.use(Padrino::Localization::Middleware, %w(en zh))

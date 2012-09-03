@@ -4,6 +4,7 @@ ruby '1.9.3'
 
 # framework
 gem 'padrino', '0.10.7'
+gem "padrino-localization"
 gem 'sinatra-flash', require: 'sinatra/flash'
 
 # server

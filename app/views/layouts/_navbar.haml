@@ -1,3 +1,4 @@
+-# encoding: utf-8
 .navbar.navbar-fixed-top
   .navbar-inner
     .container
@@ -19,4 +20,14 @@
               = link_to '/auth/github' do
                 Register
 
-          %li= link_to "Codeaholics HK", "http://codeaholics.hk"
+            %li.dropdown
+              =link_to "#", {:class => "dropdown-toggle", :data => {:toggle => "dropdown", :target => "#"}} do
+                = locale_name
+                <b class="caret"></b>
+              %ul.dropdown-menu
+                %li
+                  = link_to "Switch Language", "#"
+                %li.divider
+                - ALL_LOCALE.map do |key, value|                              
+                  %li
+                    =link_to value, "/#{key}"                            

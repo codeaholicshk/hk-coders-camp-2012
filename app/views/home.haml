@@ -1,14 +1,14 @@
 %article.row
   .span9
     %header.banner
-      %h1 Hong Kong Code Camp 2012
-      %h2 ~ 24 Hours Iterative Coding ~
-      %h4 Date: 12 Oct (Fri) ~ 13 Oct (Sat)
-      %h4 Time: 19:00 ~ 19:00
-      %h4 Venue: To Be Confirmed
+      %h1= I18n.t('home.app_name')
+      %h2= I18n.t('home.app_tagline')
+      %h4= I18n.t('home.code_camp_date')
+      %h4= I18n.t('home.code_camp_time')
+      %h4= I18n.t('home.code_camp_venue')
 
       .homepage-action-buttons
-        =link_to "Register Now", register_path, class: "btn btn-large"
+        =link_to I18n.t('btn.register_now'), register_path, class: "btn btn-large"
 
     %section.panel
       %header

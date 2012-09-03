@@ -35,6 +35,8 @@ Bundler.require(:default, PADRINO_ENV)
 #
 Padrino.before_load do
   Mongoid.load!(File.join(Padrino.root,"config/mongoid.yml"))
+  
+  I18n.default_locale = :en
 end
 
 ##

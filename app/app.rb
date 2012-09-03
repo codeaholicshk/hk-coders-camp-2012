@@ -9,6 +9,7 @@ class HkCodersCamp2012 < Padrino::Application
   register Padrino::Mailer
   register Padrino::Helpers
   register Padrino::Admin::AccessControl
+  register Padrino::Localization::Urls  
 
   enable :sessions
 

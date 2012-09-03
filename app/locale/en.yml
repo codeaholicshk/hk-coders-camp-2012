@@ -1,0 +1,11 @@
+en:
+  home:
+    app_name: Hong Kong Code Camp 2012
+    app_tagline: "~ 24 Hours Iterative Coding ~"
+    code_camp_date: "Date: 12 Oct (Fri) ~ 13 Oct (Sat)"
+    code_camp_time: "Time: 19:00 ~ 19:00"
+    code_camp_venue: "Venue: To Be Confirmed"
+    
+  btn:
+    register_now: "Register Now"
+    
