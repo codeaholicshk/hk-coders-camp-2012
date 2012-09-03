@@ -3,6 +3,7 @@ class Account
   attr_accessor :password, :password_confirmation
 
   # Fields
+  field :login,            type: String  
   field :name,             type: String
   field :surname,          type: String
   field :email,            type: String
@@ -73,6 +74,7 @@ class Account
     create! do |account|
       account.provider    = auth["provider"]
       account.uid         = auth["uid"]
+      account.login       = auth["extra"]["raw_info"]["login"]
       account.name        = auth["extra"]["raw_info"]["name"]
       account.blog_url    = auth["extra"]["raw_info"]["blog"]
       account.github_page = auth["extra"]["raw_info"]["html_url"]

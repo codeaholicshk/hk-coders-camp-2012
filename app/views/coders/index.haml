@@ -12,7 +12,7 @@
       %li.span3.coder
         .thumbnail
           = gravatar_tag(coder, size: 210)
-          %h3= link_to coder.name, coder.github_page
+          %h3= gravatar_link_to(coder)
 
 -content_for :javascripts do
   :javascript

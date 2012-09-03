@@ -86,7 +86,15 @@ class HkCodersCamp2012 < Padrino::Application
 
   get :auth, map: '/auth/:provider/callback' do
     auth    = request.env["omniauth.auth"]
-    account = Account.where(provider: auth["provider"]).where(uid: auth["uid"]).first || Account.create_with_omniauth(auth)
+    existing_account = Account.where(provider: auth["provider"]).where(uid: auth["uid"]).first
+    
+    account = if existing_account
+      existing_account.update_attributes(:login => auth["extra"]["raw_info"]["login"])
+      existing_account
+    else
+      Account.create_with_omniauth(auth)
+    end
+   
     set_current_account(account)
 
     redirect url("coders")
