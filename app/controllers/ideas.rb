@@ -46,8 +46,8 @@ HkCodersCamp2012.controllers :ideas do
     if !@idea.voter_ids.include?(current_account.id)
       @idea.voters << current_account
       @idea.save
-      redirect url(:ideas, :index)
     end
+    redirect url(:ideas, :index)    
   end
 
   delete :destroy, with: :id do
