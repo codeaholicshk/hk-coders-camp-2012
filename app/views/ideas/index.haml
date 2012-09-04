@@ -10,12 +10,12 @@
       .ideas
         - @ideas.all.sort_by{ rand }.each do |idea|
           .span4.idea-note.sticky.rotating
-              = link_to url(:ideas, :show, :id => idea.id) do
-                %article
-                  %h2= idea.name
-                  %p= idea.description
-              %span.voting-links.pull-right
-                = up_vote_link(idea)
+            = link_to url(:ideas, :show, :id => idea.id) do
+              %article
+                %h2= idea.name
+                %p= idea.description
+            %span.voting-links.pull-right
+              = up_vote_link(idea)
 
 
 -content_for :javascripts do
