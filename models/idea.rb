@@ -11,6 +11,7 @@ class Idea
 
   belongs_to :published_by_account, :class_name => "Account", inverse_of: :published_ideas
   embeds_many :comments
+  has_and_belongs_to_many :voters, :class_name => "Account"  
 
   # You can define indexes on documents using the index macro:
   # index :field <, unique: true>

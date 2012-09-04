@@ -40,6 +40,14 @@ HkCodersCamp2012.controllers :ideas do
       render 'ideas/edit'
     end
   end
+  
+  post :up_vote, with: :id do
+    @idea = Idea.find(params[:id])
+    if !@idea.voter_ids.include?(current_account.id)
+      @idea.voters << current_account
+      @idea.save!
+    end
+  end
 
   delete :destroy, with: :id do
     idea = Idea.find(params[:id])
