@@ -23,7 +23,7 @@ en:
       heading: "How does it work"
       content: "Our target is only one simple thing: <strong>come together on 12th Oct and code all day long</strong>.<br/><br/>We are not going to enforce rules like your boss dictating what you have to build.<br/>But we try our best to make sure you will have a great time with other coders."
     schedule:
-      header: "Schedule"
+      heading: "Schedule"
       idea_election:
         date_range: "20 Aug ~ 23 Sep"
         heading: "Idea Election"
