@@ -14,7 +14,7 @@ zh:
   home:
     app_name: "香港程式編寫營 2012"
     app_tagline: "~ 二十四小時程式編寫 ~"
-    code_camp_date: "Date: 十月十二日 (五) ~ 十月十三日 (六)"
+    code_camp_date: "日期: 十月十二日 (五) ~ 十月十三日 (六)"
     code_camp_time: "時間: 晚上七時 ～ 晚上七時"
     code_camp_venue: "場地: 待定"
     
@@ -57,7 +57,7 @@ zh:
       heading: "邊個可以參加 ?"
       content_1: "鍾意寫PROGRAM就黎得。"
       content_2: "今次活動無局限某一種程式。你可以選擇任何一款你喜愛既工具"
-    sponsor:
+    sponsors:
       heading: "贊助商！"
       remarks: "... (如有興趣提供任何形式既協助，請聯絡我們)"
     equipment:
