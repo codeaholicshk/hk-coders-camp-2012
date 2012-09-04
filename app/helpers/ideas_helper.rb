@@ -1,4 +1,4 @@
-# Helper methods defined here can be accessed in any controller or view in the application
+# encoding: utf-8
 
 HkCodersCamp2012.helpers do
   def up_vote_link(idea)
