@@ -10,7 +10,7 @@
       .ideas
         - @ideas.all.sort_by{ rand }.each do |idea|
           .span4.idea-note
-            %a.sticky.rotating{href: "/#{I18n.locale}/ideas/show/#{idea.id}"}
+            %a.sticky.rotating{href: url(:ideas, :show, :id => idea.id)}
               %article
                 %h2= idea.name
                 %p= idea.description
