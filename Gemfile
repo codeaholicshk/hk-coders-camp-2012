@@ -29,6 +29,9 @@ gem 'bcrypt-ruby', require: "bcrypt"
 gem 'omniauth'
 gem 'omniauth-github'
 
+# SEO
+gem 'xml-sitemap'
+
 group :test do
   gem 'rspec'
   gem 'rack-test', require: "rack/test"

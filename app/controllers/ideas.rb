@@ -11,14 +11,12 @@ HkCodersCamp2012.controllers :ideas do
     render 'ideas/new'
   end
 
-  get :show do
+  get :show, with: :id do
     @idea = Idea.find(params[:id])
     render 'ideas/show'
   end
 
   post :create do
-    puts "create"
-    puts params
     @idea = current_account.published_ideas.new(params[:idea])
     if @idea.save
       flash[:notice] = 'Idea was successfully created.'

@@ -104,4 +104,20 @@ class HkCodersCamp2012 < Padrino::Application
   get :index do
     render 'home'
   end
+  
+  get '/sitemap.xml' do
+    map = XmlSitemap::Map.new('camp.codeaholics.hk') do |m|
+      m.add '/ideas', :period => :daily, :priority => 0.8
+      m.add '/coders', :period => :daily, :priority => 0.8
+      Post.all.each do |post|
+        m.add url(:posts, :show, id: post.id), :updated => post.created_at, :period => :weekly        
+      end
+      Idea.all.each do |idea|
+        m.add url(:ideas, :show, id: idea.id), :updated => idea.created_at, :period => :weekly     
+      end
+    end
+ 
+    headers['Content-Type'] = 'text/xml'
+    map.render
+  end  
 end
