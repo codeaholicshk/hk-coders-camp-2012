@@ -1,140 +1,123 @@
 %article.row
   .span9
     %header.banner
-      %h1= I18n.t('home.app_name')
-      %h2= I18n.t('home.app_tagline')
-      %h4= I18n.t('home.code_camp_date')
-      %h4= I18n.t('home.code_camp_time')
-      %h4= I18n.t('home.code_camp_venue')
+      %h1= t('home.app_name')
+      %h2= t('home.app_tagline')
+      %h4= t('home.code_camp_date')
+      %h4= t('home.code_camp_time')
+      %h4= t('home.code_camp_venue')
 
       .homepage-action-buttons
-        =link_to I18n.t('btn.register_now'), register_path, class: "btn btn-large"
+        =link_to t('btn.register_now'), register_path, class: "btn btn-large"
 
     %section.panel
       %header
-        %h2 How does it work
+        %h2= t('section.how_does_it_work.heading')
 
-      %p
-        Our target is only one simple thing:
-        %strong come together on 12th Oct and code all day long
-        \.
-
-      %br
-
-      %p
-        We are not going to enforce rules like your boss dictating what you have to build.
-      %p
-        But we try our best to make sure you will have a great time with other coders.
+      %p= t('section.how_does_it_work.content')
 
     %section.panel
       %header
-        %h2 Schedule
+        %h2= t('section.schedule.heading')
 
       %table.schedule-overview
         %thead
           %tr
-            %th 20 Aug ~ 23 Sep
-            %th 24 Sep ~ 30 Sep
-            %th 31 Sep ~ 12 Oct
-            %th 12 Oct ~ 13 Oct
+            %th t('section.schedule.idea_election.date_range')
+            %th t('section.schedule.idea_finalists.date_range')
+            %th t('section.schedule.team_formation.date_range')
+            %th t('section.schedule.code_day.date_range')
         %tbody
           %tr
-            %td= link_to "Idea Election", "#"
-            %td= link_to "Finalists Annoucement", "#"
-            %td= link_to "Team Formation", "#"
-            %td= link_to "CODE", "#"
+            %td= link_to t('section.schedule.idea_election.heading'), "#"
+            %td= link_to t('section.schedule.idea_finalists.heading'), "#"
+            %td= link_to t('section.schedule.team_formation.heading'), "#"
+            %td= link_to t('section.schedule.code_day.heading'), "#"
 
       %ol
         %li
-          %h4 Idea Election
+          %h4= t('section.schedule.idea_election.heading')
           %ul
-            %li After registration, you can suggest ideas and vote on ideas
+            %li= t('section.schedule.idea_election.content')
         %li
-          %h4 Idea Finalists Annoucement
+          %h4= t('section.schedule.idea_finalists.heading')
           %ul
-            %li Depends on the number of ideas and registrations we receive, a shortlist of most popular ideas will be announced.
+            %li= t('section.schedule.idea_finalists.content') 
         %li
-          %h4 Project Team Formation
+          %h4= t('section.schedule.team_formation.heading')
           %ul
-            %li Around 2 weeks time will be given to finalize team members, fine-tune project scope, gathering resources, setting up your dev machine.
+            %li= t('section.schedule.team_formation.content')
         %li
-          %h4 Code !
+          %h4= t('section.schedule.code_day.heading')
           %ul
-            %li Within that 24 hours, we will have several all-together standup meetings as a chance to share your progress and give hands.
-            %li standup_at: [22:00, 13:00, 17:00]
-            %li You are encouraged to stay overnight, sleeping bags will be ready.
-            %li At the end (19:00, 13th Oct), each team is going to give a short presentation about what they have done in last 24 hours. (just a hint ... coders like demo more than slideshow ^__^)
+            %li= t('section.schedule.code_day.content_1')
+            %li= t('section.schedule.code_day.content_2')
+            %li= t('section.schedule.code_day.content_3')
+            %li= t('section.schedule.code_day.content_4')
 
     %section.panel
       %header
-        %h2 What to build
+        %h2= t('section.what.heading')
 
-      %p We don't care if the system you build is solving 1,000,000 dollars problem or not.
-      %p We don't give a shit about the business model.
-      %p We just want you to build something fun together.
-
-    %section.panel
-      %header
-        %h2 Why ?
-
-      %p.lead
-        You are not the only GEEK in the village !
-      %p
-        There are so many passionated coders like you, who wanna spend time and effort on something interesting.
-      %p
-        Just come and do something. I don't have to give you reason at all.
+      %p= t('section.what.content_1')
+      %p= t('section.what.content_2')
+      %p= t('section.what.content_3')
 
     %section.panel
       %header
-        %h2 Who can join ?
+        %h2= t('section.why.heading')
 
-      %p
-        If you are interested in coding, come and join us.
-      %p
-        The event is programming language agnostic. You can pick whatever you like from your toolbox to make it happen.
-
+      %p.lead= t('section.why.content_1')
+      %p= t('section.why.content_2')        
+      %p= t('section.why.content_3')
 
     %section.panel
       %header
-        %h2 Sponsors
+        %h2= t('section.who.heading')
+
+      %p= t('section.who.content_1')
+      %p= t('section.who.content_2')
+        
+    %section.panel
+      %header
+        %h2= t('section.sponsors.heading')
 
       %ul
-        %li Thought Sauce
-        %li Hooko
-        %li ... (let us know if you would like to sponsor us)
+        %li= link_to "Thought Sauce", "http://thought-sauce.com"
+        %li= link_to "Hooko", "http://hooko.com"
+        %li= t('section.sponsors.remarks')
 
     %section.panel
       %header
-        %h2 Equipment
-      %p
-        Here are things we will provide:
+        %h2= t('section.equipment.heading')
+      %p=t('section.equipment.content.desc')
+        
       %ul
-        %li Wifi access
-        %li sleeping bags
-        %li lunch and dinner ( very likely Pizza and Salad )
-        %li snacks and drinks ( beer, redbull, ...)
+        %li=t('section.equipment.content.wifi')
+        %li=t('section.equipment.content.sleeping_bags')
+        %li=t('section.equipment.content.food')
+        %li=t('section.equipment.content.snacks_drinks')
 
     %section.panel
       %header
-        %h2 You have a question ?
+        %h2=t('section.questions.heading')
+      %p=t('section.questions.content_1')
       %p
-        email: tatonlto [at] gmail.com
+        =link_to t('section.questions.google_group'), "http://groups.google.com/group/codeaholics"
       %p
-        =link_to "Google Group", "http://groups.google.com/group/codeaholics"
+        =link_to t('section.questions.facebook_page'), "https://www.facebook.com/codeaholics"
       %p
-        =link_to "Facebook Page", "https://www.facebook.com/codeaholics"
-      %p
-        Note: this whole thing was proposed at Codeaholics HK August Meetup.
-        =link_to "Proposal", "http://codeaholics-hk-camp-2012.herokuapp.com/"
+        =t('section.questions.content_2')
+        =link_to t('section.questions.proposal'), "http://codeaholics-hk-camp-2012.herokuapp.com/"
 
   .span3
     %figure
       = image_tag("camp_logo.png")
 
     %aside.panel
-      %h3 Wanna join ?
+      %h3=t('section.sidebar.wanna_join')
       %p
-        Register with your
+        =t('section.sidebar.register')
         =link_to( image_tag("github.png", title: "Github OAuth"), register_path)
 
       = partial "social"

@@ -1,11 +1,84 @@
 zh:
+  meta:
+    description: "香港程式編寫營 2012。十月十二日 (五) ~ 十月十三日 (六)。"
+  menu:
+    link:
+      hong_kong_code_camp: "香港程式編寫營 2012"
+      ideas: "點子"
+      coders: "已登記Coder"
+      blog: "網誌"
+      me: "我"
+      register: "登記"
+      switch_lang: "轉換語言"
+      
   home:
-    app_name: "[zh]Hong Kong Code Camp 2012"
-    app_tagline: "[zh]~ 24 Hours Iterative Coding ~"
-    code_camp_date: "[zh]Date: 12 Oct (Fri) ~ 13 Oct (Sat)"
-    code_camp_time: "[zh]Time: 19:00 ~ 19:00"
-    code_camp_venue: "[zh]Venue: To Be Confirmed"
+    app_name: "香港程式編寫營 2012"
+    app_tagline: "~ 二十四小時程式編寫 ~"
+    code_camp_date: "Date: 十月十二日 (五) ~ 十月十三日 (六)"
+    code_camp_time: "時間: 晚上七時 ～ 晚上七時"
+    code_camp_venue: "場地: 待定"
     
+  section:
+    how_does_it_work: 
+      heading: "怎樣參與"
+      content: "我地只有一個簡單目的：<strong> O係十月十二日聚埋一齊寫PROGRAM。</strong>.<br/><br/>你有你既自由決定自已黎到要寫咩PROGRAM。<br/>我地會盡力提供你需要既環境。"
+    schedule:
+      header: "登記流程"
+      idea_election:
+        date_range: "八月二十日 ~ 九月二十三日"
+        heading: "提議點子及公開投票"
+        content: "登記後，你可以提出任何你想做既程式，之後再對你有興趣既點子投票"
+      idea_finalists:
+        date_range: "九月二十四日 ~ 九月三十日"
+        heading: "最佳點子出列"
+        content: "因應收集到的登記及點子數量，我們會選擇最受歡迎既點子進行最後準備。"
+      team_formation:
+        date_range: "九月三十一日 ~ 十月十二日"
+        heading: "組隊及準備工具"
+        content: "最後兩星期會俾時間大家組隊，安排時間及準備工具。如有任何需要可以向大會求助。"
+      code_day:
+        date_range: "十月十二日 ~ 十月十三日"
+        heading: "Code !"
+        content_1: "二十四小時入面，我地將會有幾次簡單既全體聚會。一方面可以分享進度，另一方面可以向其他隊伍尋求意見發協助。"
+        content_2: "聚會時間: [22:00, 13:00, 17:00]"
+        content_3: "如果你來自外地，我地會提供睡袋。"
+        content_4: "到最後 (十月十三日晚上七時), 每一隊要同大家作一個簡單既分享。講下二十四小時內寫左D咩野程式。"
+    what:
+      heading: "可以做甚麼題材？"
+      content_1: "我地唔理會你寫出黎既程式係唔係一盤好翻意。"
+      content_2: "我地唔理會你寫出黎既程式係唔係賺到錢。"
+      content_3: "我地只係想你可以同其他CODER寫得開心。"
+    why:
+      heading: "點解要參加 ?"
+      content_1: "鍾意寫PROGRAM就黎。唔需要偉大既原因。"
+      content_2: ""
+      content_3: ""
+    who:
+      heading: "邊個可以參加 ?"
+      content_1: "鍾意寫PROGRAM就黎得。"
+      content_2: "今次活動無局限某一種程式。你可以選擇任何一款你喜愛既工具"
+    sponsor:
+      heading: "贊助商！"
+      remarks: "... (如有興趣提供任何形式既協助，請聯絡我們)"
+    equipment:
+      heading: "工具 設施 物資"
+      content:
+        desc: "我地將會提供："
+        wifi: "Wifi "
+        sleeping_bags: "大量睡袋"
+        food: "午餐晚餐"
+        snacks_drinks: "零食及飲品 ( 啤酒, 紅牛, ...)"
+    questions:
+      heading: "任何問題 ?"
+      content_1: "email: tatonlto [at] gmail.com"
+      content_2: '注意： 此活動於八月的CODEAHOLICS 聚會，由參加者發起'
+      google_group: "Google Group"
+      facebook_page: "Facebook Page"
+      proposal: "提案"
+    sidebar:
+      wanna_join: "想參加 ?"
+      register: "請用你的GITHUB帳戶登記："
+            
   btn:
-    register_now: "[zh]Register Now"
+    register_now: "登記參加"
     

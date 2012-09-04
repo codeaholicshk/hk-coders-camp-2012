@@ -1,11 +1,84 @@
 en:
+  meta:
+    description: "24 Hours Code Camp for Hong Kong. 12 Oct 2012(Fri) to 13 Oct 2012(Sat). By community and for community."
+  menu:
+    link:
+      hong_kong_code_camp: "Hong Kong Code Camp"
+      ideas: "Ideas"
+      coders: "Coders"
+      blog: "Blog"
+      me: "me"
+      register: "Register"
+      switch_lang: "Switch Language"
+      
   home:
-    app_name: Hong Kong Code Camp 2012
+    app_name: "Hong Kong Code Camp 2012"
     app_tagline: "~ 24 Hours Iterative Coding ~"
     code_camp_date: "Date: 12 Oct (Fri) ~ 13 Oct (Sat)"
     code_camp_time: "Time: 19:00 ~ 19:00"
     code_camp_venue: "Venue: To Be Confirmed"
     
+  section:
+    how_does_it_work: 
+      heading: "How does it work"
+      content: "Our target is only one simple thing: <strong>come together on 12th Oct and code all day long</strong>.<br/><br/>We are not going to enforce rules like your boss dictating what you have to build.<br/>But we try our best to make sure you will have a great time with other coders."
+    schedule:
+      header: "Schedule"
+      idea_election:
+        date_range: "20 Aug ~ 23 Sep"
+        heading: "Idea Election"
+        content: "After registration, you can suggest ideas and vote on ideas"
+      idea_finalists:
+        date_range: "24 Sep ~ 30 Sep"
+        heading: "Finalists Annoucement"
+        content: "Depends on the number of ideas and registrations we receive, a shortlist of most popular ideas will be announced."
+      team_formation:
+        date_range: "31 Sep ~ 12 Oct"
+        heading: "Project Team Formation"
+        content: "Around 2 weeks time will be given to finalize team members, fine-tune project scope, gathering resources, setting up your dev machine."
+      code_day:
+        date_range: "12 Oct ~ 13 Oct"
+        heading: "Code !"
+        content_1: "Within that 24 hours, we will have several all-together standup meetings as a chance to share your progress and give hands."
+        content_2: "standup_at: [22:00, 13:00, 17:00]"
+        content_3: "You are encouraged to stay overnight, sleeping bags will be ready."
+        content_4: "At the end (19:00, 13th Oct), each team is going to give a short presentation about what they have done in last 24 hours. (just a hint ... coders like demo more than slideshow ^__^)"
+    what:
+      heading: "What to build"
+      content_1: "We don't care if the system you build is solving 1,000,000 dollars problem or not."
+      content_2: "We don't give a shit about the business model."
+      content_3: "We just want you to build something fun together."
+    why:
+      heading: "Why ?"
+      content_1: "You are not the only GEEK in the village !"
+      content_2: "There are so many passionated coders like you, who wanna spend time and effort on something interesting."
+      content_3: "Just come and do something. I don't have to give you reason at all."
+    who:
+      heading: "Who can join ?"
+      content_1: "If you are interested in coding, come and join us."
+      content_2: "The event is programming language agnostic. You can pick whatever you like from your toolbox to make it happen."
+    sponsor:
+      heading: "Sponsors"
+      remarks: "... (let us know if you would like to sponsor us)"
+    equipment:
+      heading: "Equipment"
+      content:
+        desc: "Here are things we will provide:"
+        wifi: "Wifi access"
+        sleeping_bags: "Sleeping bags"
+        food: "lunch and dinner ( very likely Pizza and Salad )"
+        snacks_drinks: "snacks and drinks ( beer, redbull, ...)"
+    questions:
+      heading: "Question ?"
+      content_1: "email: tatonlto [at] gmail.com"
+      content_2: 'Note: this whole thing was proposed at Codeaholics HK August Meetup.'
+      google_group: "Google Group"
+      facebook_page: "Facebook Page"
+      proposal: "Proposal"
+    sidebar:
+      wanna_join: "Wanna join ?"
+      register: "Register with your"
+            
   btn:
     register_now: "Register Now"
     
