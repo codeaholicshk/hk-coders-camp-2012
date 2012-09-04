@@ -17,9 +17,9 @@
             %span.voting-links.pull-right
               - if current_account
                 - form_for :idea, url(:ideas, :up_vote, id: 123), method: :post do |f|            
-                  = f.submit vote_content, :class => "link"
+                  = f.submit vote_content(idea), :class => "link"
               - else
-                vote_content
+                vote_content(idea)
 
 -content_for :javascripts do
   :javascript
