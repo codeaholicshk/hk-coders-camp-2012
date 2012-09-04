@@ -45,7 +45,8 @@ HkCodersCamp2012.controllers :ideas do
     @idea = Idea.find(params[:id])
     if !@idea.voter_ids.include?(current_account.id)
       @idea.voters << current_account
-      @idea.save!
+      @idea.save
+      redirect url(:ideas, :index)
     end
   end
 
