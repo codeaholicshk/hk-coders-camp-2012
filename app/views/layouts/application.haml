@@ -10,7 +10,7 @@
     %meta{ charset: "utf-8"}
     %meta{ content: "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
     %meta{ name: 'author', content: "Matthew Rudy Jacobs, Eddie Lau" }/
-    %meta{ name: 'description', content: t('meta.description') }/
+    %meta{ name: 'description', content: yield_content(:seo_description) || t('meta.description') }/
     %meta{ name: 'keywords', content: "Hong Kong,Coder,Camp" }/
     %meta{ name: 'distribution', content: 'global' }/
     %meta{ name: 'robots', content: 'follow, all' }/
@@ -32,7 +32,9 @@
     = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"
 
 
-    %title Hong Kong Code Camp 2012
+    %title
+      Hong Kong Code Camp 2012
+      = yield_content(:seo_title)
 
     = stylesheet_link_tag "bootstrap.min", "all"
 

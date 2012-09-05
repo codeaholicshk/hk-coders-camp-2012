@@ -1,3 +1,6 @@
+- content_for :seo_description, truncate_words(@post.body, 20)
+- content_for :seo_title, "| #{@post.title}"
+
 #show
   = partial "posts/post", object: @post
 
