@@ -25,3 +25,13 @@
       %aside
         %h3 Share this
         = partial "/social"
+
+    .panel
+      %aside
+        %h3 Vote for this
+        - if current_account
+          - form_for :idea, url(:ideas, :up_vote, id: @idea.id), method: :post do |f|
+            = f.submit vote_content(@idea), class: "btn"
+        - else
+          .btn.disabled
+            = vote_content(@idea)
