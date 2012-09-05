@@ -33,5 +33,5 @@
           - form_for :idea, url(:ideas, :up_vote, id: @idea.id), method: :post do |f|
             = f.submit vote_content(@idea), class: "btn"
         - else
-          .btn.disabled
+          .btn.disabled{title: "sign in to vote on ideas"}
             = vote_content(@idea)

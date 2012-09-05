@@ -20,9 +20,10 @@
             %span.voting-links.pull-right
               - if current_account
                 - form_for :idea, url(:ideas, :up_vote, id: idea.id), method: :post do |f|
-                  = f.submit vote_content(idea), :class => "link"
+                  = f.submit vote_content(idea), class: :btn
               - else
-                = vote_content(idea)
+                .btn.disabled{title: "sign in to vote on ideas"}
+                  = vote_content(idea)
 
 -content_for :javascripts do
   :javascript
