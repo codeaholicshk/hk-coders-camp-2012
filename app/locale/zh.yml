@@ -10,16 +10,16 @@ zh:
       me: "我"
       register: "登記"
       switch_lang: "轉換語言"
-      
+
   home:
     app_name: "香港程式編寫營 2012"
     app_tagline: "~ 二十四小時程式編寫 ~"
     code_camp_date: "日期: 十月十二日 (五) ~ 十月十三日 (六)"
     code_camp_time: "時間: 晚上七時 ～ 晚上七時"
     code_camp_venue: "場地: 待定"
-    
+
   section:
-    how_does_it_work: 
+    how_does_it_work:
       heading: "怎樣參與"
       content: "我地只有一個簡單目的：<strong> O係十月十二日聚埋一齊寫PROGRAM。</strong>.<br/><br/>你有你既自由決定自已黎到要寫咩PROGRAM。<br/>我地會盡力提供你需要既環境。"
     schedule:
@@ -78,7 +78,7 @@ zh:
     sidebar:
       wanna_join: "想參加 ?"
       register: "請用你的GITHUB帳戶登記："
-            
+
   btn:
     register_now: "登記參加"
-    
+
