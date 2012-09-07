@@ -82,3 +82,6 @@ zh:
   btn:
     register_now: "登記參加"
 
+  flash:
+    error:
+      same_vote: "你已對這點子投過票。"

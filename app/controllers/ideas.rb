@@ -47,7 +47,7 @@ HkCodersCamp2012.controllers :ideas do
       @idea.voters << current_account
       @idea.save
     else
-      flash[:error] = "You have already voted for this idea."
+      flash[:error] = t('flash.error.same_vote')
     end
     redirect url(:ideas, :index)
   end

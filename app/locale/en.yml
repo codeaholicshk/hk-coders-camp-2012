@@ -81,3 +81,7 @@ en:
 
   btn:
     register_now: "Register Now"
+
+  flash:
+    error:
+      same_vote: "You have already voted for this idea."
