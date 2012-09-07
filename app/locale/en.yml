@@ -10,16 +10,16 @@ en:
       me: "me"
       register: "Register"
       switch_lang: "Switch Language"
-      
+
   home:
     app_name: "Hong Kong Code Camp 2012"
     app_tagline: "~ 24 Hours Iterative Coding ~"
     code_camp_date: "Date: 12 Oct (Fri) ~ 13 Oct (Sat)"
     code_camp_time: "Time: 19:00 ~ 19:00"
     code_camp_venue: "Venue: To Be Confirmed"
-    
+
   section:
-    how_does_it_work: 
+    how_does_it_work:
       heading: "How does it work"
       content: "Our target is only one simple thing: <strong>come together on 12th Oct and code all day long</strong>.<br/><br/>We are not going to enforce rules like your boss dictating what you have to build.<br/>But we try our best to make sure you will have a great time with other coders."
     schedule:
@@ -78,7 +78,10 @@ en:
     sidebar:
       wanna_join: "Wanna join ?"
       register: "Register with your"
-            
+
   btn:
     register_now: "Register Now"
-    
+
+  flash:
+    error:
+      same_vote: "You have already voted for this idea."

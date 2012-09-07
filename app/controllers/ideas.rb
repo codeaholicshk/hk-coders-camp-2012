@@ -40,14 +40,16 @@ HkCodersCamp2012.controllers :ideas do
       render 'ideas/edit'
     end
   end
-  
+
   post :up_vote, with: :id do
     @idea = Idea.find(params[:id])
     if !@idea.voter_ids.include?(current_account.id)
       @idea.voters << current_account
       @idea.save
+    else
+      flash[:error] = t('flash.error.same_vote')
     end
-    redirect url(:ideas, :index)    
+    redirect url(:ideas, :index)
   end
 
   delete :destroy, with: :id do
