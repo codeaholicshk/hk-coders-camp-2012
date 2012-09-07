@@ -2,6 +2,10 @@
 - content_for :seo_title, "| Ideas"
 
 .block
+  - flash.each do |name, msg|
+    %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
+      %a.close{"data-dismiss" => "alert"} &#215;
+      = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
   .secondary-navigation.pull-right
     - if current_account.nil?
       =link_to "Register", register_path, class: "btn btn-large"
