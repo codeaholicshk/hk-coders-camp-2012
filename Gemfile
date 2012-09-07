@@ -45,4 +45,5 @@ group :development do
   gem 'pry'
   gem 'pry-padrino'
   gem 'rack-mini-profiler'
+  gem 'rack-canonical-host'
 end

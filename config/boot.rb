@@ -7,6 +7,11 @@ require 'rubygems' unless defined?(Gem)
 require 'bundler/setup'
 Bundler.require(:default, PADRINO_ENV)
 
+case ENV['PADRINO_ENV'].to_sym
+  when :development then
+    Padrino.use Rack::CanonicalHost, '127.0.0.1'
+end
+
 ##
 # ## Enable devel logging
 #
@@ -35,7 +40,7 @@ Bundler.require(:default, PADRINO_ENV)
 #
 Padrino.before_load do
   Mongoid.load!(File.join(Padrino.root,"config/mongoid.yml"))
-  
+
   I18n.default_locale = :en
 end
 
