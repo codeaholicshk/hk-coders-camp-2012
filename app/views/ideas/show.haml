@@ -30,6 +30,8 @@
         %h3 Comments
         - if current_account.nil?
           = link_to t('btn.regiter_and_comment'), register_path, class: "btn btn-large"
+          %br
+          %br
         - else
           - form_for :comment, url(:comments, :create, :idea_id => @idea), class: "form form-horizontal" do |f|
             = f.text_area :message, class: "text_field span6"
