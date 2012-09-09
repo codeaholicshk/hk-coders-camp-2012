@@ -1,11 +1,7 @@
-.block
-  .secondary-navigation
-    %ul.wat-cf
-      %li.first=link_to pat(:list), url(:ideas, :index)
-  .content
-    %h2.title
-      =pat(:edit)
-      =mt(:idea)
-    .inner
-      -form_for :idea, url(:ideas, :update, id: @idea.id), method: :put, class: :form do |f|
-        =partial "ideas/form", locals: { f: f }
+%section.panel
+
+  %header
+    %h1 Edit Idea
+
+  -form_for :idea, url(:ideas, :update, id: @idea.id), method: :put, class: "form form-horizontal" do |f|
+    =partial "ideas/form", locals: { f: f }

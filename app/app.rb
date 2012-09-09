@@ -115,7 +115,7 @@ class HkCodersCamp2012 < Padrino::Application
         # end
         Post.all.each do |idea|
           m.add "#{locale_path}/posts/#{idea.id}", :updated => idea.created_at, :period => :weekly     
-        end        
+        end
         Idea.all.each do |idea|
           m.add "#{locale_path}/ideas/#{idea.id}", :updated => idea.created_at, :period => :weekly     
         end

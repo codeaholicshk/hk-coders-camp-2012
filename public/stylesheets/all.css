@@ -82,3 +82,20 @@ body {
   .homepage-action-buttons a {
     margin: 10px 20px;
     font-size: 2em; }
+
+
+.comment-item {
+	border-left: 5px solid #CE4213;
+	font-style: italic;
+	background-color: #EEE;
+}
+blockquote {
+	border-left: none;
+}
+blockquote:before {
+	content: "'"
+}
+
+blockquote:after {
+	content: "'"
+}

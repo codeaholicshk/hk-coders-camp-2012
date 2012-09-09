@@ -6,12 +6,17 @@
     .panel
 
       %header
+        .helper-links.pull-right
+          = link_to url(:ideas, :edit, :id => @idea), :class => "btn" do
+            %i.icon-edit
+            Edit
         %h1
           = @idea.name
           %small
             by
             = @idea.published_by_account.name
             = gravatar_tag @idea.published_by_account, size: 50
+        
 
       %p= @idea.description
 
@@ -19,6 +24,26 @@
         %li= @idea.cool_thing1
         %li= @idea.cool_thing2
         %li= @idea.cool_thing3
+        
+    .panel
+      %header
+        %h3 Comments
+        - if current_account.nil?
+          = link_to t('btn.regiter_and_comment'), register_path, class: "btn btn-large"
+        - else
+          - form_for :comment, url(:comments, :create, :idea_id => @idea), class: "form form-horizontal" do |f|
+            = f.text_area :message, class: "text_field span6"
+            = f.submit pat(:submit), class: "btn btn-primary btn-large span2"
+      
+      - @idea.comments.order_by(created_at: -1).map do |comment|
+        .comment-item
+          = comment.created_at.to_s(:short)
+          &nbsp;
+          = comment.commented_by_account.name
+          \:
+          %blockquote= comment.message
+          %p
+            
 
   .span3
     .panel

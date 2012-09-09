@@ -81,6 +81,7 @@ zh:
 
   btn:
     register_now: "登記參加"
+    regiter_and_comment: "請先登記參加，方可對此點子留意見"    
 
   flash:
     error:

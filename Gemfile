@@ -20,7 +20,7 @@ gem 'haml'
 gem 'redcarpet'
 
 # datastore
-gem 'mongoid'
+gem 'mongoid', '>= 3.0.5'
 gem 'mongo'
 gem 'bson_ext', require: "mongo"
 

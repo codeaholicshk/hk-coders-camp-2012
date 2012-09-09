@@ -81,6 +81,7 @@ en:
 
   btn:
     register_now: "Register Now"
+    regiter_and_comment: "Register and Comment on this idea"
 
   flash:
     error:
