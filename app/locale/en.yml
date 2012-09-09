@@ -78,6 +78,10 @@ en:
     sidebar:
       wanna_join: "Wanna join ?"
       register: "Register with your"
+      counters:
+        heading: "Registrations"
+        registered_coders: "Registered Coders: "
+        proposed_ideas: "Proposed Ideas: "
 
   btn:
     register_now: "Register Now"

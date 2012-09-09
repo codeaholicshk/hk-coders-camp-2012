@@ -78,6 +78,10 @@ zh:
     sidebar:
       wanna_join: "想參加 ?"
       register: "請用你的GITHUB帳戶登記："
+      counters:
+        heading: "登記進度"
+        registered_coders: "CODERS："
+        proposed_ideas: "點子："
 
   btn:
     register_now: "登記參加"

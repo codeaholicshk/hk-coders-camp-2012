@@ -121,3 +121,13 @@
         =link_to( image_tag("github.png", title: "Github OAuth"), register_path)
 
       = partial "social"
+      
+    %aside.panel
+      %h3=t('section.sidebar.counters.heading')
+      %p
+        =t('section.sidebar.counters.registered_coders')
+        %strong= Account.where(role: "users").count
+
+      %p
+        =t('section.sidebar.counters.proposed_ideas')
+        %strong= Idea.count
