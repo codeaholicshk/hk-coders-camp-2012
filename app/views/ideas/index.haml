@@ -18,6 +18,9 @@
         - @ideas.all.sort_by{ rand }.each do |idea|
           .span4.idea-note.sticky.rotating
             = link_to url(:ideas, :show, :id => idea.id) do
+              - if idea.comments.any?
+                %span.comments-count.pull-right
+                  = image_tag "comment.png"                            
               %article
                 %h2= idea.name
                 %p= idea.description
