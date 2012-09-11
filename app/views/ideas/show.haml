@@ -6,10 +6,11 @@
     .panel
 
       %header
-        .helper-links.pull-right
-          = link_to url(:ideas, :edit, :id => @idea), :class => "btn" do
-            %i.icon-edit
-            Edit
+        - if current_account == @idea.published_by_account
+          .helper-links.pull-right
+            = link_to url(:ideas, :edit, :id => @idea), :class => "btn" do
+              %i.icon-edit
+              Edit
         %h1
           = @idea.name
           %small
