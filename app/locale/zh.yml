@@ -16,7 +16,8 @@ zh:
     app_tagline: "~ 二十四小時程式編寫 ~"
     code_camp_date: "日期: 十月十二日 (五) ~ 十月十三日 (六)"
     code_camp_time: "時間: 晚上七時 ～ 晚上七時"
-    code_camp_venue: "場地: 待定"
+    code_camp_venue_label: "場地: "
+    code_camp_venue: "CoCoon HK"    
 
   section:
     how_does_it_work:

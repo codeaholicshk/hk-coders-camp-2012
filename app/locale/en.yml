@@ -16,7 +16,8 @@ en:
     app_tagline: "~ 24 Hours Iterative Coding ~"
     code_camp_date: "Date: 12 Oct (Fri) ~ 13 Oct (Sat)"
     code_camp_time: "Time: 19:00 ~ 19:00"
-    code_camp_venue: "Venue: To Be Confirmed"
+    code_camp_venue_label: "Venue: "
+    code_camp_venue: "CoCoon HK"
 
   section:
     how_does_it_work:
