@@ -35,7 +35,7 @@ HkCodersCamp2012.controllers :ideas do
     @idea = current_account.published_ideas.find(params[:id])
     if @idea.update_attributes(params[:idea])
       flash[:notice] = 'Idea was successfully updated.'
-      redirect url(:ideas)
+      redirect url(:ideas, :index)
     else
       render 'ideas/edit'
     end
