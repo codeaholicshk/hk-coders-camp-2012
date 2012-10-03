@@ -8,10 +8,12 @@ class Idea
   field :cool_thing1, type: String
   field :cool_thing2, type: String
   field :cool_thing3, type: String
+  field :shortlisted, type: Boolean, default: false
 
   belongs_to :published_by_account, :class_name => "Account", inverse_of: :published_ideas
   embeds_many :comments
-  has_and_belongs_to_many :voters, :class_name => "Account"  
+  has_and_belongs_to_many :voters, :class_name => "Account"
+  has_and_belongs_to_many :joined_coders, :class_name => "Account"
 
   # You can define indexes on documents using the index macro:
   # index :field <, unique: true>

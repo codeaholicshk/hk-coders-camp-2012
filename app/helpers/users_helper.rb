@@ -15,6 +15,11 @@ HkCodersCamp2012.helpers do
     content_tag(:div, thumbnail_content, class: :thumbnail)
   end
 
+  def gravatar_thumbnail(user, options={})
+    thumbnail_content = link_to(gravatar_tag(user), user.github_page)
+    content_tag(:div, thumbnail_content, class: :thumbnail)
+  end
+
   def locale_name
     ALL_LOCALE[I18n.locale]
   end

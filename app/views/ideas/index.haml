@@ -11,16 +11,51 @@
       =link_to "Register", register_path, class: "btn btn-large"
     - else
       =link_to "Propose idea", url(:ideas, :new), class: "btn btn-large"
+
   .content
-    %h1 Ideas
+    %h1 Shortlisted Ideas
     .stickies.row
       .ideas
-        - @ideas.all.sort_by{ rand }.each do |idea|
-          .span4.idea-note.sticky.rotating
+        - @shortlisted_ideas.all.sort_by{ rand }.each do |idea|
+          .span3.idea-note.sticky.rotating
+            .clearfix
+              = link_to url(:ideas, :show, :id => idea.id) do
+                - if idea.comments.any?
+                  %span.comments-count.pull-right
+                    = image_tag "comment.png"
+                %article
+                  %h2= idea.name
+                  %p= idea.description
+
+              %span.voting-links.pull-right
+                .btn.disabled= vote_content(idea)
+
+            %hr.clearfix
+
+            - idea.joined_coders.all.sort_by{ rand }.each do |coder|
+              .span1.coder
+                = gravatar_thumbnail(coder)
+
+            .clearfix
+
+            - if current_account.nil?
+              =link_to( "Register and Join this project", register_path, class: "btn btn-large")
+            - else
+              - form_for :idea, url(:ideas, :join, id: idea.id), method: :post do |f|
+                = f.submit "Join this project", class: :btn
+
+  %hr
+
+  .content
+    %h1 Archived
+    .stickies.row
+      .ideas
+        - @archived_ideas.all.sort_by{ rand }.each do |idea|
+          .span3.idea-note.sticky.rotating
             = link_to url(:ideas, :show, :id => idea.id) do
               - if idea.comments.any?
                 %span.comments-count.pull-right
-                  = image_tag "comment.png"                            
+                  = image_tag "comment.png"
               %article
                 %h2= idea.name
                 %p= idea.description
@@ -32,13 +67,4 @@
                 .btn.disabled{title: "sign in to vote on ideas"}
                   = vote_content(idea)
 
--content_for :javascripts do
-  :javascript
-    jQuery(function($){
-      var $coders = $('.ideas');
-      $coders.imagesLoaded(function(){
-        $coders.masonry({
-          itemSelector : '.idea-note'
-        });
-      });
-    });
+
