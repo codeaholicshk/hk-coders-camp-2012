@@ -16,7 +16,7 @@
                 = gravatar_tag(current_account, size: 20)
                 = t('menu.link.me')
           - else
-            %li
+            -# %li
               = link_to '/auth/github' do
                 = t('menu.link.register')
 
@@ -28,6 +28,6 @@
                 %li
                   = link_to t('menu.link.switch_lang'), "#"
                 %li.divider
-                - ALL_LOCALE.map do |key, value|                              
+                - ALL_LOCALE.map do |key, value|
                   %li
-                    =link_to value, "/#{key}"                            
+                    =link_to value, "/#{key}"
