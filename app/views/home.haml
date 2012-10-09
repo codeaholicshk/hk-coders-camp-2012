@@ -1,5 +1,10 @@
 %article.row
   .span9
+
+    %header.banner
+      %h1 The Code Camp is now underway!!!
+      %h2 Email <a href="mailto:matthewrudyjacobs@gmail.com">me</a> if you still want to be involved!
+
     %header.banner
       %h1= t('home.app_name')
       %h2= t('home.app_tagline')
@@ -8,9 +13,6 @@
       %h4
         = t('home.code_camp_venue_label')
         = link_to t('home.code_camp_venue'), "http://www.hkcocoon.org/"
-
-      .homepage-action-buttons
-        =link_to t('btn.register_now'), register_path, class: "btn btn-large"
 
     %section.panel
       %header
@@ -44,7 +46,7 @@
         %li
           %h4= t('section.schedule.idea_finalists.heading')
           %ul
-            %li= t('section.schedule.idea_finalists.content') 
+            %li= t('section.schedule.idea_finalists.content')
         %li
           %h4= t('section.schedule.team_formation.heading')
           %ul
@@ -70,7 +72,7 @@
         %h2= t('section.why.heading')
 
       %p.lead= t('section.why.content_1')
-      %p= t('section.why.content_2')        
+      %p= t('section.why.content_2')
       %p= t('section.why.content_3')
 
     %section.panel
@@ -79,7 +81,7 @@
 
       %p= t('section.who.content_1')
       %p= t('section.who.content_2')
-        
+
     %section.panel
       %header
         %h2= t('section.sponsors.heading')
@@ -93,7 +95,7 @@
       %header
         %h2= t('section.equipment.heading')
       %p=t('section.equipment.content.desc')
-        
+
       %ul
         %li=t('section.equipment.content.wifi')
         %li=t('section.equipment.content.sleeping_bags')
@@ -116,14 +118,14 @@
     %figure
       = image_tag("camp_logo.png")
 
-    %aside.panel
+    -# %aside.panel
       %h3=t('section.sidebar.wanna_join')
       %p
         =t('section.sidebar.register')
         =link_to( image_tag("github.png", title: "Github OAuth"), register_path)
 
       = partial "social"
-      
+
     %aside.panel
       %h3=t('section.sidebar.counters.heading')
       %p
