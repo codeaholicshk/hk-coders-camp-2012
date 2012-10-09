@@ -8,7 +8,7 @@
       = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
   .secondary-navigation.pull-right
     - if current_account.nil?
-      =link_to "Register", register_path, class: "btn btn-large"
+      -# =link_to "Register", register_path, class: "btn btn-large"
     - else
       =link_to "Propose idea", url(:ideas, :new), class: "btn btn-large"
 
