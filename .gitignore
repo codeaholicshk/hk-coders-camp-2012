@@ -22,3 +22,6 @@ doc/
 
 # sass
 .sass-cache
+
+# rvm, rbenv... upto you
+.rvmrc
