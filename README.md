@@ -1,4 +1,4 @@
-![Hong Kong Code Camp 2012](http://camp.codeaholics.hk/images/camp_logo.png?1347177601 "Hong Kong Code Camp 2012")
+![Hong Kong Code Camp 2012](https://raw.github.com/codeaholicshk/hk-coders-camp-2012/master/public/images/camp_logo.png "Hong Kong Code Camp 2012")
 
 # Hong Kong Code Camp 2012 Registration Page
 
